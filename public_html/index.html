@@ -102,22 +102,114 @@
     <link rel="stylesheet" href="dist/testimonial.css" />
     <link rel="stylesheet" href="dist/pns.css" />
     <link rel="stylesheet" href="dist/c.css " />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   </head>
 
   <body>
 
-    <section class="navsec">
+    <header class="fixed top-0 left-0 z-50 w-full bg-white shadow">
+      <div
+        class="flex flex-wrap items-center justify-between  pt-3  w-[80%] mx-auto">
+        <!-- Left: Logo and social icons -->
+        <div>
+          <img src="assets/images/newimages/PNI New Logo .png" alt="PN Logo"
+            class="object-contain h-14" />
+        </div>
+
+        <!-- Middle: Contact Info -->
+        <div class="flex-col hidden text-sm text-right md:flex">
+          <div class="flex items-center gap-1">
+            <span>📞</span><span>+91 7433986083</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span>✉️</span><span>info@pninstitute.in</span>
+          </div>
+        </div>
+
+        <!-- Right: Buttons -->
+        <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
+          <button
+            class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1 text-base">PNGOE
+            App Login</button>
+          <button
+            class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1 ">Pay
+            Fee Online</button>
+          <button
+            class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1 ">Admission
+            Enquiry</button>
+          <button
+            class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1 ">Admission
+            Registration</button>
+        </div>
+      </div>
+
+      <div class="flex gap-8 w-[80%] mx-auto justify-between">
+        <div class="flex mt-2 md:mt-0">
+          <a href="#"><img
+              src="https://img.icons8.com/fluency/24/000000/facebook-new.png" /></a>
+          <a href="#"><img
+              src="https://img.icons8.com/fluency/24/instagram-new.png" /></a>
+          <a href="#"><img
+              src="https://img.icons8.com/fluency/24/youtube-play.png" /></a>
+          <a href="#"><img
+              src="https://img.icons8.com/fluency/24/whatsapp.png" /></a>
+          <a href="#"><img
+              src="https://img.icons8.com/fluency/24/marker.png" /></a>
+        </div>
+        <div class="relative mt-2 w-[80%] flex gap-0 bg-yellow-400">
+
+          <div class="relative w-[50px] h-[36px] overflow-hidden">
+            <!-- White Background -->
+            <div class="absolute inset-0 z-0 bg-white"></div>
+
+            <!-- Yellow Diagonal Overlay -->
+            <div
+              class="absolute inset-0 z-10 bg-yellow-400 clip-diagonal"></div>
+          </div>
+          <style>
+            .clip-diagonal {
+               clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            }
+          </style>
+
+          <nav
+            class="relative z-10 flex flex-wrap justify-start w-full py-2 ml-10 text-sm font-medium text-black bg-yellow-400">
+            <ul class="flex flex-wrap justify-center gap-4">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li>|</li>
+              <li><a href="#" class="hover:underline">About
+                  Us</a></li><li>|</li>
+              <li><a href="#"
+                  class="hover:underline">Facilities</a></li><li>|</li>
+              <li><a href="#"
+                  class="hover:underline">Admissions</a></li><li>|</li>
+              <li><a href="#" class="hover:underline">Media</a></li><li>|</li>
+              <li><a href="#" class="hover:underline">Contact
+                  Us</a></li><li>|</li>
+              <li><a href="#" class="hover:underline">List Of Holidays
+                  2025-26</a></li><li>|</li>
+              <li><a href="#" class="hover:underline">Exam Schedule</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- <section class="navsec">
       <nav class="navbar">
         <div class="hamburger" id="hamburger"></div>
         <div
           class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[460px] ">
-          <!-- Logo clickable -->
+    
           <a href="/" class="nav-logo">
             <img src="assets/images/newimages/PNI New Logo .png" alt="PNI Logo"
               class="w-auto h-12" />
           </a>
 
-          <!-- Clickable phone number -->
           <div class="hidden md:block">
             <p class="mx-auto text-blue-500">For Inquiry contact</p>
             <a href="tel:+919099255528"
@@ -132,24 +224,7 @@
             <li class="nav__link">Home</li>
           </a>
 
-          <!-- <a href="#">
-            <li class="nav__link sub-list-parent" id="subListHandle">
-              Pay Fees <span class="down-arrow">&gt;</span>
-              <ul class="sub-list" id="subList">
-                <li class="sub-list-item">
-                  <a href="https://rzp.io/l/iwk8p7doE">Primary</a>
-                </li>
-                <li class="sub-list-item">
-                  <a href="https://rzp.io/l/iwk8p7doE">Secondary</a>
-                </li>
-                <li class="sub-list-item">
-                  <a
-                    href="https://pages.razorpay.com/pl_LBs3XM2DHZjmJU/view">Higher
-                    Secondary</a>
-                </li>
-              </ul>
-            </li>
-          </a> -->
+  
           <li class="nav__link">
             <a
               href="https://rzp.io/l/iwk8p7doE"
@@ -162,9 +237,7 @@
           <a href="pages/overview.html">
             <li class="nav__link">Overview</li>
           </a>
-          <!-- <a href="site/index.html">
-            <li class="nav__link">Application</li>
-          </a> -->
+        
           <a href="pages/faq.html">
             <li class="nav__link">Faq</li>
           </a>
@@ -174,27 +247,9 @@
           <a href="pages/student.html">
             <li class="nav__link">Student Corner</li>
           </a>
-          <!-- student corner drop down  -->
-          <!-- <a href="#">
-            <li class="nav__link sub-list-parent" id="subListHandle">
-              Student Corner <span class="down-arrow">&gt;</span>
-              <ul class="sub-list" id="subList">
-                
-                <li class="sub-list-item">
-                  <a href="pages/student.html#pnAdvantages">PN Advantages</a>
-                </li>
-                <li class="sub-list-item">
-                  <a href="pages/student.html#alumni">Alumni Registration</a>
-                </li>
-                <li class="sub-list-item">
-                  <a href="pages/student.html#review">Give Us Review</a>
-                </li>
-                <li class="sub-list-item">
-                  <a href="pages/student.html#testimonials">Testimonials</a>
-                </li>
-              </ul>
-            </li>
-          </a> -->
+
+   
+           
           <a href="pages/result.html">
             <li class="nav__link">Results</li>
           </a>
@@ -211,7 +266,7 @@
           </a>
         </ul>
       </nav>
-    </section>
+    </section> -->
 
     <!-- <section class="hero">
       <img src="assets/images/newimages/1.jpg" alt="" />
