@@ -1,0 +1,1708 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Student Corner - PN Institute</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../dist/c.css">
+    <link rel="stylesheet" href="../dist/slick.css" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <link rel="stylesheet" href="../dist/testimonial.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    
+      .openButton {
+        display: flex;
+        justify-content: center;
+        /* justify-content: left; */
+        background-color: #0068bd;
+        color: #fff;
+        border-radius: 12px;
+
+       
+      }
+      .dwn{
+        background-color: #0068bd;
+        color: #fff;
+        border-radius: 15px;
+        font-weight: bold;
+      }
+      .dwn:hover{
+        background-color: #fff;
+        color: #0068bd;
+        border:lightskyblue 2px solid;
+      }
+      .openButton:hover{
+        background-color: #fff;
+        color: #0068bd;
+        border: #0068bd 2px solid;
+      }
+      
+      .loginPopup,.loginPopup1 ,.loginPopup2,.loginPopup3,.loginPopup4,.loginPopup5,.loginPopup6,.loginPopup7,.loginPopup8{
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .formPopup,.formPopup1,.formPopup2,.formPopup3,.formPopup4,.formPopup5,.formPopup6,.formPopup7,.formPopup8 {
+        display: none;
+        position: fixed;
+        left: 45%;
+        top: 5%;
+        transform: translate(-50%, 5%);
+        /* border: 3px solid #999999; */
+        z-index: 9;
+      }
+      .formContainer {
+        margin: 2.7em 0;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 25px;
+      }
+      .formContainer input[type=text],
+      .formContainer input[type=number] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type=text]:focus,
+      .formContainer input[type=number]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+      .formContainer .cancel {
+        background-color: #cc0000;
+        border-radius: 30px;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+      #form-class{
+        width: 250px;
+      }
+      
+      /* review form */
+      input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 5px;
+  resize: vertical;
+}
+
+input[type=tel], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 5px;
+  resize: vertical;
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 17px;
+ 
+} 
+
+input[type=submit] {
+  background-color: #0068bd;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+}
+
+input[type=submit]:hover {
+  background-color: #fff;
+  color: #0068bd;
+  border: #0068bd 2px solid;
+  font-weight: bolder;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="loginPopup">
+      <div class="formPopup" id="popupForm">
+        <form id="contactForm" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email" placeholder="Your Email" name="email"
+            required>
+          <span id="error" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class"
+            required>
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/10G4zjuid0f7pe0_jUb1I5TWBrxpjmt-2/view?usp=sharing">
+          <button type="submit" id="sub" class="dwn">Submit</button>
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup1">
+      <div class="formPopup1" id="popupForm1">
+        <form id="contactForm1" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm1()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup1">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name" name="name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email1" placeholder="Your Email" name="email"
+            required>
+          <span id="error1" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number1" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError1" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class"
+            required>
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1uelPdX7NY0qjSu31rfSyWLpByb1J0IF7/view?usp=sharing">
+          <button type="submit" class="dwn">Submit</button>
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download1"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup2">
+      <div class="formPopup2" id="popupForm2">
+        <form id="contactForm2" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm2()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup2">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email2" placeholder="Your Email" name="email"
+            required>
+          <span id="error2" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number2" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError2" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1LZha-btOnx361aiduNqxshK-qblqbeNu/view?usp=drive_link">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download2"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup3">
+      <div class="formPopup3" id="popupForm3">
+        <form id="contactForm3" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm3()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup3">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email3" placeholder="Your Email" name="email"
+            required>
+          <span id="error3" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number3" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError3" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1ddrhjFJx3gWzt8ZtAqth71qC6WT0_dqO/view?usp=drive_link">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download3"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup4">
+      <div class="formPopup4" id="popupForm4">
+        <form id="contactForm4" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm4()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup4">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email4" placeholder="Your Email" name="email"
+            required>
+          <span id="error4" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number4" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError4" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1YEEvu07lSvOa-GvuNx0V-ttMv7h_luTD/view?usp=sharing">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download4"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup5">
+      <div class="formPopup5" id="popupForm5">
+        <form id="contactForm5" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm5()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup5">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email5" placeholder="Your Email" name="email"
+            required>
+          <span id="error5" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number5" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError5" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/17hSxa78kMxAKsgdfbLBVks9FspWzSHmS/view?usp=sharing">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download5"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup6">
+      <div class="formPopup6" id="popupForm6">
+        <form id="contactForm6" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm6()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup6">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email6" placeholder="Your Email" name="email"
+            required>
+          <span id="error6" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number6" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError6" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1QzTupo_ODTeM8cY5N3mB71wu2EFBmy1V/view?usp=sharing">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download6"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup7">
+      <div class="formPopup7" id="popupForm7">
+        <form id="contactForm7" action="/submit-form" method="POST"
+          class="formContainer">
+          <i class="fa fa-close" onclick="closeForm7()"
+            style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+          <input type="hidden" name="formType" value="loginPopup7">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" name="name" id="name" placeholder="Your name"
+            required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email7" placeholder="Your Email" name="email"
+            required>
+          <span id="error7" style="color: red; display: none;">Please enter a
+            valid Gmail address (example@gmail.com).</span>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="tel" id="number7" placeholder="Your contact number"
+            name="number" required>
+          <span id="phoneError7" style="color: red; display: none;">Please enter
+            a valid 10-digit phone number starting with 6-9.</span>
+
+          <select class="form-class" name="selectClass" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next"
+            value="https://drive.google.com/file/d/1GBOz_QwVkL563ixHEtKKVbB-C90F_Nv_/view?usp=sharing">
+          <button type="submit" class="dwn">Submit</button>
+
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+          <!-- <a href="" id="download7"><button class="dwn"> Download</button></a> -->
+        </form>
+      </div>
+    </div>
+    <!-- <div class="loginPopup8">
+      <div class="formPopup8" id="popupForm8">
+        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm8()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            <option value="class11A">Class 11 Arts</option>
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            <option value="class12A">Class 12 Arts</option>
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button> 
+         <a href="" id="download8"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div> -->
+    <section class="navsec">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger"></div>
+        <div class="nav-logo">
+          <img src="../assets/images/newimages/PNI New Logo .png" alt />
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <a href="../index.html">
+            <li class="nav__link">Home</li>
+          </a>
+          <a href="#">
+            <li class="nav__link sub-list-parent" id="subListHandle">
+              Pay Fees <span class="down-arrow">&gt;</span>
+              <ul class="sub-list" id="subList">
+                <li class="sub-list-item">
+                  <a href="https://rzp.io/l/iwk8p7doE">Primary</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="https://rzp.io/l/iwk8p7doE">Secondary</a>
+                </li>
+                <li class="sub-list-item">
+                  <a
+                    href="https://pages.razorpay.com/pl_LBs3XM2DHZjmJU/view">Higher
+                    Secondary</a>
+                </li>
+              </ul>
+            </li>
+          </a>
+          <a href="overview.html">
+            <li class="nav__link">Overview</li>
+          </a>
+          <!-- <a href="admission.html">
+            <li class="nav__link">Admissions</li>
+          </a> -->
+          <a href="faq.html">
+            <li class="nav__link">Faq</li>
+          </a>
+          <a href="courses.html">
+            <li class="nav__link">Courses</li>
+          </a>
+
+          <a href="student.html">
+            <li class="nav__link">Student Corner</li>
+          </a>
+
+          <!-- <a href="#">
+            <li class="nav__link sub-list-parent" id="subListHandle">
+              Student Corner <span class="down-arrow">&gt;</span>
+              <ul class="sub-list" id="subList">
+                <li class="sub-list-item">
+                  <a href="#pnAdvantages">PN Advantages</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#alumni">Alumni Registration</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#review">Give Us Review</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+              </ul>
+            </li>
+          </a> -->
+          <a href="result.html">
+            <li class="nav__link">Results</li>
+          </a>
+          <a href="career.html">
+            <li class="nav__link">Career</li>
+          </a>
+          <a href="contact.html">
+            <li class="nav__link">Contact Us</li>
+          </a>
+          <a href="https://pace.pninstitute.in">
+            <li class="nav__link button glowing_button"> &nbsp &nbsp &nbsp PACE
+              &nbsp &nbsp &nbsp</li>
+          </a>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="student__title page__title">
+      <div class="container">
+        <h1 class="title__header">Student Corner</h1>
+      </div>
+    </section>
+
+    <section class="material" id="material">
+      <h2 class="section__title">Study Material</h2>
+      <div class="container material__container">
+        <!-- <form action="" class="material-form">
+               <select name="selectBoard" id="">
+                  <option value="">Select Board</option>
+                  <option value="GSEB">GSEB</option>
+                  <option value="CBSE">CBSE</option>
+               </select>
+               <select name="selectMedium" id="">
+                  <option value="">Select Medium</option>
+                  <option value="GSEB">Gujarati</option>
+                  <option value="CBSE">English</option>
+               </select>
+               <select name="selectClass" id="">
+                  <option value="">Select Class</option>
+                  <option value="">Class 6</option>
+                  <option value="">Class 7</option>
+                  <option value="">Class 8</option>
+                  <option value="">Class 9</option>
+                  <option value="">Class 10</option>
+                  <option value="">Class 11 (Commerce)</option>
+                  <option value="">Class 11 (Science)</option>
+               
+                  <option value="">Class 12 (Commerce)</option>
+                  
+                  <option value="">Class 12 (Science)</option>
+               </select>
+               <select name="selectSubject" id="">
+                  <option value="">Select Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+               </select>
+               <button type="submit" class="button"><a href= "mailto: admisssion@pninstitite.in">Submit</a></button>
+            </form> -->
+
+        <table class="material-table">
+          <tr>
+            <th>Sr No</th>
+            <th>Topic</th>
+            <th>Link</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>10th CBSE Sample paper cdr</td>
+            <td><button class="openButton"
+                onclick="openForm()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Class 10th Maths IMP</td>
+            <td><button class="openButton"
+                onclick="openForm1()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Class 10th Sci IMP</td>
+            <td><button class="openButton"
+                onclick="openForm2()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Class 12th Math formula list</td>
+            <td><button class="openButton"
+                onclick="openForm3()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>Class 10th formula list</td>
+            <td><button class="openButton"
+                onclick="openForm4()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td>Class 10th SS IMP Question</td>
+            <td><button class="openButton"
+                onclick="openForm5()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td>Class 10th Theorems </td>
+            <td> <button class="openButton"
+                onclick="openForm6()"><strong>Download</strong></button></td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td>Class 12th Formula part 2</td>
+            <td> <button class="openButton"
+                onclick="openForm7()"><strong>Download</strong></button></td>
+          </tr>
+
+        </table>
+      </div>
+    </section>
+
+    <section class="real" id="pnAdvantages">
+      <div class="container section__title">PN Advantages</div>
+      <div class="container real__container">
+        <div class="realcat">
+          <p class="realcat__title">Study Material</p>
+          <p class="realcat__des">
+            It provides students a stepwise/level wise learning tool in every
+            subject so that students’ transformation
+            from concept learning to application & analytical learning can be
+            ensured.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Advanced Learning - iTutor</p>
+          <p class="realcat__des">
+            A complete educational solution for all groups that combines the
+            best of classroom education, self-study
+            with distraction-free learning experience, is provided to the
+            students.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Integrated Approach</p>
+          <p class="realcat__des">
+            PNI students of class IX to XII learn both School Curriculum as well
+            as Entrance Aids as the study material
+            and teaching approach delivers both quantitatively & qualitatively.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Assessment</p>
+          <p class="realcat__des">
+            Testing methodology is evolved from years of experience and updated
+            with the latest pattern of examination.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Question Banks</p>
+          <p class="realcat__des">
+            We, at PN Institute, provide various question banks for targeted
+            exams to ensure that the students are
+            having
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Back-up Classes</p>
+          <p class="realcat__des">
+            Extra-classes for average students or for those, who miss the
+            regular classes on genuine grounds with prior
+            approval, are arranged.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Superior Supervision</p>
+          <p class="realcat__des">Excellent management with stringent discipline
+            in every department is ensured.</p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Grievances</p>
+          <p class="realcat__des">
+            Student Grievances are well taken care of through dedicated
+            grievance management services.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Workshops</p>
+          <p class="realcat__des">
+            Workshops are conducted for NTSE, KVPY, JSTS, National and
+            International Olympiads.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Doubt Session</p>
+          <p class="realcat__des">
+            If some part of the subject is not clear to a student, he / she can
+            take extra guidance from the respective
+            subject teachers in doubt clearing sessions so as to compensate and
+            understand the missed topics.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Notification</p>
+          <p class="realcat__des">
+            All the relevant information such as results, date-sheet, pattern,
+            eligibility criteria for appearing in
+            NTSE/ Olympiads/ Medical/ Engineering Entrance Exams are provided
+            well in advance.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Motivational Lecture</p>
+          <p class="realcat__des">
+            Respected Parth Bansal sir personally takes Motivational Classes to
+            motivate students and to boost their
+            morale for better results with an emphasis on character building.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="alumni" id="alumni">
+      <div class="container alumni__container">
+        <h2 class="section__title">Alumni Registration</h2>
+        <form action="https://formsubmit.co/kp894855@gmail.com" method="POST" class="alumni-reg">
+          <h2>Personal Info</h2>
+          <div>
+            <input type="text" name="firstName" id="" placeholder="First Name" required />
+            <input type="text" name="lastName" id="" placeholder="Last Name" required />
+            <input type="tel" name="mobileNumber" id="" placeholder="Mobile Number" required />
+            <input type="email" name="email" id="" placeholder="Email Address" required />
+          </div>
+
+          <h2>Association with PN</h2>
+          <div>
+            <input type="text" name="class" id="" placeholder="Class" required />
+            <input type="text" name="year" id="" placeholder="Year" required />
+          </div>
+
+          <h2>Other Information (Optional)</h2>
+          <div>
+            <select name="current" id=""  >
+              <option value="">Currently Pursuing</option>
+              <option value="selfEmployed">Self Employed</option>
+              <option value="serviceJob">Service/Job</option>
+              <option value="student">Student</option>
+            </select>
+            <input type="text" name="employer" id="" placeholder="If Service/Job - Name of Organisation" />
+            <input type="text" name="designation" id="" placeholder="Designation" />
+            <input type="text" name="seftWhat" id="" placeholder="If Self Employed - Doing what?" />
+            <input type="text" name="studentWhat" id="" placeholder="If Student - Pursuing what?" />
+            
+
+
+          </div>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://pninstitute.vercel.app/pages/thank.html">
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </section> -->
+
+    <section class="alumni" id="alumni">
+      <div class="container alumni__container">
+        <h2 class="section__title">Alumni Registration</h2>
+        <form action="/submit-alumni" method="POST" class="alumni-reg">
+          <h2>Personal Info</h2>
+          <div>
+            <input type="text" name="firstName" placeholder="First Name"
+              required />
+            <input type="text" name="lastName" placeholder="Last Name"
+              required />
+            <input type="tel" name="mobileNumber" placeholder="Mobile Number"
+              required />
+            <input type="email" name="email" placeholder="Email Address"
+              required />
+          </div>
+
+          <h2>Association with PN</h2>
+          <div>
+            <!-- <input type="text" name="class" placeholder="Class" required /> -->
+            <select class="form-class" name="class">
+              <option value>Select Class</option>
+              <option value="class6">Class 6</option>
+              <option value="class7">Class 7</option>
+              <option value="class8">Class 8</option>
+              <option value="class9">Class 9</option>
+              <option value="class10">Class 10</option>
+
+              <option value="class11C">Class 11 Commerce</option>
+              <option value="class11S">Class 11 Science</option>
+
+              <option value="class12C">Class 12 Commerce</option>
+              <option value="class12S">Class 12 Science</option>
+            </select>
+            <!-- <input type="text" name="year" placeholder="Year" required /> -->
+            <select class="form-class" name="year">
+              <option value>Year</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+
+          <h2>Other Information (Optional)</h2>
+          <div>
+            <select name="current">
+              <option value>Currently Pursuing</option>
+              <option value="selfEmployed">Self Employed</option>
+              <option value="serviceJob">Service/Job</option>
+              <option value="student">Student</option>
+            </select>
+            <input type="text" name="employer"
+              placeholder="If Service/Job - Name of Organisation" />
+            <input type="text" name="designation" placeholder="Designation" />
+            <input type="text" name="seftWhat"
+              placeholder="If Self Employed - Doing what?" />
+            <input type="text" name="studentWhat"
+              placeholder="If Student - Pursuing what?" />
+          </div>
+
+          <!-- <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://pninstitute.vercel.app/pages/thank.html" /> -->
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="add-review" id="review">
+      <div class="container add-review__container">
+        <h2 class="section__title">Give Us a Review</h2>
+        <form action="/submit-review" method="POST" class="registration-form"
+          data-aos="fade-left" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-25">
+              <label for="firstname">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="firstname" name="name"
+                placeholder="Your name.." required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="class">Class</label>
+            </div>
+            <div class="col-75">
+              <!-- <input type="text" id="class" name="selectClass" placeholder="Class" required /> -->
+              <select class="form-class" name="selectClass">
+                <option value>Select Class</option>
+                <option value="class6">Class 6</option>
+                <option value="class7">Class 7</option>
+                <option value="class8">Class 8</option>
+                <option value="class9">Class 9</option>
+                <option value="class10">Class 10</option>
+
+                <option value="class11C">Class 11 Commerce</option>
+                <option value="class11S">Class 11 Science</option>
+
+                <option value="class12C">Class 12 Commerce</option>
+                <option value="class12S">Class 12 Science</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="contact">Contact</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="contact" name="contact"
+                placeholder="Mobile number" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="year">Year</label>
+            </div>
+            <div class="col-75">
+              <!-- <input type="text" id="year" name="year" placeholder="Year" required /> -->
+              <select class="form-class" name="year">
+                <option value>Year</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="attachment">Photo</label>
+            </div>
+            <div class="col-75">
+              <input type="file" id="attachment" name="attachment"
+                accept="image/png, image/jpeg" placeholder="Upload a Photo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Message</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject"
+                placeholder="Write something.." style="height:200px"
+                required></textarea>
+            </div>
+          </div>
+          <br><br>
+          <!-- <input type="hidden" name="_captcha" value="false"> -->
+          <!-- <input type="hidden" name="_next" value="https://pninstitute.vercel.app/pages/thank.html"> -->
+          <div class="row">
+            <center><button type="submit" class="form-submit button"
+                id="form-submit">Submit</button></center>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- <section class="reviews" id="testimonials">
+      <h2 class="section__title">Testimonials</h2>
+      <div class="container reviews__container">
+        <div class="review">
+          <img src="../../assets/images/testimonial/Adhira Sawant.webp" alt="" class="review-img" />
+          <p class="review-name">Adhira Sawant</p>
+          <p class="review-text">
+            I used to regularly revise the class notes and solve practice tests provided by (P. N. Institute/ our class
+            teacher). This helped me to boost my confidence and also kept me on track to achieve my goal of scoring best
+            marks in board exams.
+          </p>
+          
+        </div>
+        <div class="review">
+          <img src="../../assets/images/testimonial/Dhairya Mistry.webp" alt="" class="review-img" />
+          <p class="review-name">Dhairya Mistry</p>
+          <p class="review-text">
+            I used to make a lot of silly and careless mistakes earlier, which have improved now after attending doubt
+            solving sessions of P. N. Institute. It helped me a lot to boost my academic performance.
+          </p>
+          
+        </div>
+        <div class="review">
+          <img src="../../assets/images/testimonial/Dhyey Patel.webp" alt="" class="review-img" />
+          <p class="review-name">Dhyey Patel</p>
+          <p class="review-text">
+            All credit goes to my excellent faculties for clearing my doubts in physics right before the board exams, as
+            some of the topics were too much complicated and difficult. They made it simpler by explaining it in the
+            easiest way and by giving real life examples.
+          </p>
+          
+        </div>
+        <div class="review">
+          <img src="../../assets/images/testimonial/Riddhi Nagre.webp" alt="" class="review-img" />
+          <p class="review-name">Riddhi Nagre</p>
+          <p class="review-text">
+            I love the teachers at P. N. Institute! They all make things easier to understand and thus we enjoy
+            learning. Practice tests helps us in the best way to prepare us for better performance in exams.
+          </p>
+          
+        </div>
+        <div class="review">
+          <img src="../../assets/images/testimonial/Mugdha Kadwekar.webp" alt="" class="review-img" />
+          <p class="review-name">Mugdha Kadwekar</p>
+          <p class="review-text">
+            What helped me to score great marks in my board exams was the large number of practice tests, quizzes that I
+            solved at P. N. Institute. The class notes provided to me helped me to understand the concepts easily.
+          </p>
+          
+        </div>
+      </div>
+    </section> -->
+
+    <section
+      class="test-cont bg-gradient-to-r from-[#0A0A23] to-[#A33A17] py-10 ">
+
+      <div class="max-w-[80%] mx-auto">
+        <h1
+          class="mb-10 text-3xl font-bold text-center text-white lg:text-4xl 2xl:text-5xl">
+          Students Achievements
+        </h1>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/BANSI PATEL.png" alt="Bansi Patel"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                It was a very amazing experience studying at PN Institute.
+                Teachers and staff are very supportive. They cleared our each
+                and every doubt, teaching is so good.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/SAMAJPATI HARSHIL.png"
+                  alt="Samajpati Harshil"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                I feel very proud to be a part of P.N. Institute. This school
+                offers numerous benefits that enhance the overall learning
+                experience. This school has provided an exceptional educational
+                experience.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/TANUSH PATEL.png" alt="Tanush Patel"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                PN institute played a crucial role in my excellent board exam
+                results. Their expert guidance and effective teaching methods
+                were key to my success. I highly recommend PN institute to
+                anyone aiming for academic excellence.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/DHWANI RATHOD.png" alt="Dhwani Rathod"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                My name is Dhwani Akshay Rathod. I have got 97.40 Percentile in
+                10th SSC Result and this all credit goes to P. N. INSTITUTE and
+                all their teachers. They have supported me a lot and because of
+                their guidance I have achieved this much of goal. Thank you so
+                much P. N. INSTITUTE.
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/ARYA PATEL.png" alt="Arya Patel"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                I used to regularly revise the class notes and solve practice
+                tests provided by P. N. Institute. This helped me to boost my
+                confidence and also kept me on track to achieve my goal of
+                scoring best marks in board exams.
+              </p>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/JHALAK KATHIRIYA.png" alt="Jhalak Kathiriya"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                PN institute nurtures each student uniquely, ensuring that every
+                individual finds their own path. The faculty is elite, and they
+                approach teaching in a friendly manner. I am glad to be a
+                student of this institute!
+              </p>
+            </div>
+
+            <!-- Card 7 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/RAJVI PANCHOLI.png" alt="Rajvi Pancholi"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                PN institute played a crucial role in my excellent board exam
+                results. Their expert guidance and effective teaching methods
+                were key to my success. I highly recommend PN institute to
+                anyone aiming for academic excellence.
+              </p>
+            </div>
+
+            <!-- Card 8 -->
+            <div
+              class="flex flex-col items-center justify-center text-center border border-white swiper-slide bg-white/5 backdrop-blur rounded-3xl ">
+              <div
+                class="relative flex items-center justify-center p-3 pr-6 w-80">
+                <img src="../images/JADHAV RIYA.png" alt="Jadhav Riya"
+                  class="object-cover w-full h-full pl-6 mx-auto" />
+
+              </div>
+
+              <p
+                class="h-40 px-4 py-3 mt-4 text-sm text-black bg-white rounded-xl">
+                I used to regularly revise the class notes and solve practice
+                tests provided by our class teacher. This helped me to boost my
+                confidence and also kept me on track to achieve my goal of
+                scoring best marks in board exams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="text-white swiper-button-prev "></div>
+          <div class="text-white swiper-button-next"></div>
+
+        </div>
+      </div>
+      <script>
+        // Ensure SwiperJS is loaded before initializing
+        window.addEventListener('load', function () {
+          var swiper = new Swiper('.swiper', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            loop: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            },
+            speed: 1000,
+            breakpoints: {
+              1024: { slidesPerView: 4 },
+              768: { slidesPerView: 2 },
+              320: { slidesPerView: 1 }
+            }
+          });
+        });
+      </script>
+    </section>
+    <section class="footer max-w-[90%] md:max-w-[100%] mx-auto">
+      <div
+        class="container footer-top bg-gradient-to-r from-[#0A0A23] to-[#A33A17] text-white rounded-t-xl px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="ft-left">
+          <p class="mb-2 text-lg font-semibold left-up">Apply now for PACE,
+            Gujarat's largest scholarship exam</p>
+          <p class="max-w-lg text-sm left-down">
+            PACE is a State-level exam that helps students discover their hidden
+            talents and achieve their best.
+          </p>
+        </div>
+        <div class="mr-6 ft-right">
+          <a href="https://pace.pninstitute.in/" target="_blank">
+            <div
+              class="bg-white text-[#A33A17] font-semibold px-6 py-2 rounded-md hover:opacity-90 transition">Apply
+              Now</div>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="footer-bottom bg-[#0A0A23] text-white px-6 py-10 md:py-12 ">
+        <div class="container grid gap-10 md:grid-cols-4">
+          <!-- About -->
+          <div>
+            <img src="../dist/images/gallery/PNI White Logo.png" alt
+              class="mb-4">
+            <p class="text-sm">P. N. Institute educates its students in the
+              fields of Science, Commerce to discover and transmit
+              knowledge.</p>
+            <div class="flex mt-4 space-x-4">
+              <a href="https://www.facebook.com/pninstitute/" target="_blank"><i
+                  class="text-white fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/p.n.institute/"
+                target="_blank"><i class="text-white fab fa-instagram"></i></a>
+              <a href="https://twitter.com/PNInstitute1" target="_blank"><i
+                  class="text-white fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@P.N.Institute"
+                target="_blank"><i class="text-white fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div>
+            <p class="mb-4 text-lg font-semibold">Address</p>
+            <a href="https://g.co/kgs/BWBxdk">
+              <p class="flex items-start text-sm"><i
+                  class="mt-1 mr-2 fas fa-map-marker-alt"></i>Gajanan Heights Nr
+                Darbar Chokdi, Manjalpur, Vadodara - 390011</p>
+            </a>
+            <p class="mt-2 text-sm"><i class="fas fa-phone-alt"></i><a
+                href="tel:+919099255528">&nbsp;+91 9099255528</a></p>
+            <p class="text-sm"><i class="fas fa-phone-alt"></i><a
+                href="tel:+917433986083">&nbsp;+91 7433986083</a></p>
+            <p class="text-sm"><i class="fas fa-envelope"></i><a
+                href="mailto:admission@pninstitute.in">&nbsp;admission@pninstitute.in</a></p>
+          </div>
+
+          <!-- Explore -->
+          <div>
+            <p class="mb-4 text-lg font-semibold">Explore</p>
+            <ul class="space-y-2 text-sm">
+              <li><a href="../pages/courses.html"
+                  class="hover:underline">Courses</a></li>
+              <li><a href="../pages/student.html"
+                  class="hover:underline">Student Corner</a></li>
+              <li><a href="../pages/tnc.html" class="hover:underline">Terms &
+                  Conditions</a></li>
+              <li><a href="../pages/result.html"
+                  class="hover:underline">Result</a></li>
+            </ul>
+          </div>
+
+          <!-- Others -->
+          <div>
+            <p class="mb-4 text-lg font-semibold">Others</p>
+            <ul class="space-y-2 text-sm">
+              <li><a href="../pages/Refund & Cancellation.html"
+                  class="hover:underline">Refund</a></li>
+              <li><a href="../pages/career.html"
+                  class="hover:underline">Career</a></li>
+              <li><a href="../pages/faq.html"
+                  class="hover:underline">FAQs</a></li>
+              <li><a href="https://rzp.io/l/iwk8p7doE"
+                  class="hover:underline">Pay Fees</a></li>
+              <li><a href="../pages/privacy.html"
+                  class="hover:underline">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class=" bg-[#0A0A23] text-center text-white text-sm py-4 border-t border-white/10">
+      <div class="container">
+        &copy; Copyright 2024. All Rights Reserved by PN Institute
+      </div>
+    </section>
+
+    <script src="../dist/jquery.min.js"></script>
+    <script src="../dist/jquery-migrate.min.js"></script>
+    <script src="../dist/slick.min.js"></script>
+    <script src="../dist/slick-slide.js"></script>
+    <script src="../dist/script.js"></script>
+    <script src="../dist/val.js"></script>
+    <!-- Linking SwiperJS script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="../dist/sliss.js"></script>
+
+    <!-- it is reseting the form when user is coming back to the same page using browser navigation button -->
+    <script>
+      window.addEventListener('pageshow', function(event) {
+    if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        // Clear form fields
+        document.getElementById('contactForm').reset();
+        document.getElementById('contactForm1').reset();
+        document.getElementById('contactForm2').reset();
+        document.getElementById('contactForm3').reset();
+        document.getElementById('contactForm4').reset();
+        document.getElementById('contactForm5').reset();
+        document.getElementById('contactForm6').reset();
+        document.getElementById('contactForm7').reset();
+    }
+});
+  
+    </script>
+    <!-- <script>
+      function validateGmailForm(formId, emailId, errorId) {
+            document.getElementById(formId).addEventListener('submit', function(event) {
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+                const emailInput = document.getElementById(emailId).value;
+
+                const errorMessage = document.getElementById(errorId);
+
+                if (!emailPattern.test(emailInput)) {
+                    event.preventDefault();  // Prevent form submission
+                    errorMessage.style.display = 'block';  // Show error message
+                } else {
+                    errorMessage.style.display = 'none';  // Hide error if valid
+                }
+            });
+        }
+
+        // Apply Gmail validation for each form
+        validateGmailForm('contactForm', 'email', 'error');
+        validateGmailForm('contactForm1', 'email1', 'error1');
+        validateGmailForm('contactForm2', 'email2', 'error2');
+        validateGmailForm('contactForm3', 'email3', 'error3');
+        validateGmailForm('contactForm4', 'email4', 'error4');
+        validateGmailForm('contactForm5', 'email5', 'error5');
+        validateGmailForm('contactForm6', 'email6', 'error5');
+        validateGmailForm('contactForm7', 'email7', 'error5');
+        // Repeat for other forms (contactform2 to contactform7)
+  </script> -->
+
+  </body>
+</html>
+
+<script>
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+  function openForm1() {
+    document.getElementById("popupForm1").style.display = "block";
+  }
+  function closeForm1() {
+    document.getElementById("popupForm1").style.display = "none";
+  }
+  function openForm2() {
+    document.getElementById("popupForm2").style.display = "block";
+  }
+  function closeForm2() {
+    document.getElementById("popupForm2").style.display = "none";
+  }
+  function openForm3() {
+    document.getElementById("popupForm3").style.display = "block";
+  }
+  function closeForm3() {
+    document.getElementById("popupForm3").style.display = "none";
+  }
+  function openForm4() {
+    document.getElementById("popupForm4").style.display = "block";
+  }
+  function closeForm4() {
+    document.getElementById("popupForm4").style.display = "none";
+  }
+  function openForm5() {
+    document.getElementById("popupForm5").style.display = "block";
+  }
+  function closeForm5() {
+    document.getElementById("popupForm5").style.display = "none";
+  }
+  function openForm6() {
+    document.getElementById("popupForm6").style.display = "block";
+  }
+  function closeForm6() {
+    document.getElementById("popupForm6").style.display = "none";
+  }
+  function openForm7() {
+    document.getElementById("popupForm7").style.display = "block";
+  }
+  function closeForm7() {
+    document.getElementById("popupForm7").style.display = "none";
+  }
+  function openForm8() {
+    document.getElementById("popupForm8").style.display = "block";
+  }
+  function closeForm8() {
+    document.getElementById("popupForm8").style.display = "none";
+  }
+
+  document.getElementById('sub').addEventListener('click',()=>{
+    console.log(document.getElementById('name').value) 
+  })
+
+  // document.getElementById('sub').addEventListener('click',(event)=>{
+  //   event.preventDefault(); // Prevent default form submission behavior
+
+  //     document.getElementById('name').value='';
+  //     document.getElementById('email').value='';   
+  //     document.getElementById('number').value='';
+  //     document.getElementById('form-class').value='';   
+
+  // })
+
+  // it reloads the page everytime when you come back to the page 
+  if (performance.navigation.type === 1) {
+            console.log('This is a page reload.');
+        } else { 
+            location.reload();
+        }
+        
+
+        
+
+    function closeForm() {
+        document.getElementById('popupForm').style.display = 'none';
+    }
+    
+  $(document).ready(function(){
+       $('#download').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10 CBSE Sample Paper CDR.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download1').click(function(e){
+         e.preventDefault()
+         window.location.href="10th  Matha  IMP 2020-2021.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download2').click(function(e){
+         e.preventDefault()
+         window.location.href="10th Science IMP 2020-2021.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download3').click(function(e){
+         e.preventDefault()
+         window.location.href="12TH Maths Formulas list.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download4').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10 Maths Formula List (2)cdr.pdf"
+       });
+     });
+    
+     $(document).ready(function(){
+       $('#download5').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10th S.S Imp Question.pdf"
+       });
+     });
+     
+    
+     $(document).ready(function(){
+       $('#download6').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10th Theorems 15-3-21.pdf"
+       });
+     });
+    
+     $(document).ready(function(){
+       $('#download7').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 12th Formula part 2.pdf"
+       });
+     });
+         
+
+    
+
+  
+</script>

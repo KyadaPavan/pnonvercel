@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Details Form</title>
+    <link rel="stylesheet" href="../dist/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="applicat">
+    <div class="section-head text-center">
+        <h2 class="text-uppercase">
+            Application for Recruitment
+        </h2>
+        <div class="rdx-separator-outer ">
+            <div class="rdx-separator bg-primary style-liner"></div>
+        </div>
+        
+        
+    </div>
+    <div class="app-main-panel ">
+        <div class="app-panel-heading">
+            <h3 class="app-panel-title">Personal Details</h3>
+        </div>
+    
+        <div class="app-panel-body">
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Apply For Designation</label><span class="app-text-danger">*</span>
+                    <select name="designation" id="designation" class="app-form-control" required>
+                        <option value="" disabled selected>-- Select Designation --</option>
+                        <option value="1">HR Executive</option>
+                        <option value="2">Assistant Teacher</option>
+                        <option value="3">Admin</option>
+                        <option value="4">Graphics Designer</option>
+                        <option value="5">Faculty</option>
+                        <option value="6">Telecaller</option>
+                        <option value="7">Counsellor</option>
+                        <option value="8">Accountant</option>
+                        <option value="9">Manager</option>
+                        <option value="10">Marketing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">First Name</label><span class="app-text-danger">*</span>
+                    <input name="firstName" type="text" maxlength="100" id="firstName" class="app-form-control app-text-uppar" placeholder="Enter First Name" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Surname</label><span class="app-text-danger">*</span>
+                    <input name="lastName" type="text" maxlength="100" id="lastName" class="app-form-control app-text-uppar" placeholder="Enter Surname" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Father/Husband Name</label><span class="app-text-danger">*</span>
+                    <input name="fatherName" type="text" maxlength="100" id="fatherName" class="app-form-control app-text-uppar" placeholder="Enter Father/Husband Name" required />
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Gender</label><span class="app-text-danger">*</span>
+                    <div>
+                        <label class="app-checkbox-inline app-radio-inline pt0">
+                            <input id="genderMale" type="radio" name="gender" value="male" required />
+                            <span class="app-rdio-text">Male</span>
+                        </label>
+                        <label class="app-checkbox-inline app-radio-inline pt0">
+                            <input id="genderFemale" type="radio" name="gender" value="female" required />
+                            <span class="app-rdio-text">Female</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Date of Birth</label><span class="app-text-danger">*</span>
+                    <input name="birthDate" type="date" id="birthDate" class="app-form-control app-datepicker app-text-uppar" placeholder="Enter Birth Date (dd-mm-yyyy)" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Category</label><span class="app-text-danger">*</span>
+                    <select name="category" id="category" class="app-form-control" required>
+                        <option value="" disabled selected>-- Select Category --</option>
+                        <option value="1">Open</option>
+                        <option value="2">EWS</option>
+                        <option value="3">OBC</option>
+                        <option value="4">SC</option>
+                        <option value="5">ST</option>
+                    </select>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Area/Village</label>
+                    <input name="village" type="text" maxlength="50" id="village" class="app-form-control app-text-uppar" placeholder="Enter Village" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Taluka</label>
+                    <input name="taluka" type="text" maxlength="50" id="taluka" class="app-form-control app-text-uppar" placeholder="Enter Taluka" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">District</label>
+                    <input name="district" type="text" maxlength="50" id="district" class="app-form-control app-text-uppar" placeholder="Enter District" />
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">State</label>
+                    <input name="state" type="text" maxlength="50" id="state" class="app-form-control app-text-uppar" placeholder="Enter State" />
+                </div>
+                <div class="app-subdetail" style="flex: 0 0 66.666667%; max-width: 66.666667%;">
+                    <label class="app-head-name">Full Address</label>
+                    <textarea name="address" rows="1" cols="20" id="address" class="app-form-control app-text-uppar" placeholder="Enter Address"></textarea>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Mobile No</label><span class="app-text-danger">*</span>
+                    <input name="mobileNo" type="tel" maxlength="10" id="mobileNo" class="app-form-control app-text-uppar" placeholder="Enter Mobile No" pattern="\d{10}" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">WhatsApp No</label>
+                    <input name="whatsAppNo" type="tel" maxlength="10" id="whatsAppNo" class="app-form-control app-text-uppar" placeholder="Enter WhatsApp No" pattern="\d{10}" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Email Id</label><span class="app-text-danger">*</span>
+                    <input name="emailId" type="email" id="emailId" class="app-form-control app-txtEmailId" placeholder="Enter Email Id" required />
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+        <div class="app2-body mt-5">
+            <div class="app2-main-panel">
+                <div class="app2-panel-heading">
+                    <h3 class="app2-panel-title">Educational Details</h3>
+                </div>
+                <div class="app2-panel-body">
+                    <!-- First Section: Educational Details -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Section</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="section" id="section" class="app2-form-control">
+                                <option value="0">-- Select Section --</option>
+                                <option value="1">HR</option>
+                                <option value="2">Account</option>
+                                <option value="3">Academic</option>
+                                <option value="4">Non Academic</option>
+                            </select>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Medium (YOU CAN SELECT MULTIPLE)</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="medium" id="medium" class="app2-form-control" data-placeholder="Select Medium" multiple>
+                                <option value="0">-- Select Medium --</option>
+                                <option value="1">Gujarati</option>
+                                <option value="2">English</option>
+                                <option value="3">Hindi</option>
+                                <option value="4">Marathi</option>
+                                <option value="5">Odia</option>
+                                <option value="6">Urdu</option>
+                                <option value="7">Telugu</option>
+                                <option value="8">Other</option>
+                            </select>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Teaching (YOU CAN SELECT MULTIPLE)</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="teaching" id="teaching" class="app2-form-control" data-placeholder="Select Teaching" multiple>
+                                <option value="0">-- Select Teaching --</option>
+                                <option value="1">Board</option>
+                                <option value="2">JEE</option>
+                                <option value="3">NEET</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <!-- Second Section: Subject to Teach -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Subject to Teach</label>
+                            <span class="app2-text-danger">*</span>
+                            <input name="subject1" type="text" maxlength="50" id="subject1" class="app2-form-control" placeholder="Enter Subject1" autocomplete="off" />
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">&nbsp;</label>
+                            <input name="subject2" type="text" maxlength="50" id="subject2" class="app2-form-control" placeholder="Enter Subject2" autocomplete="off" />
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">&nbsp;</label>
+                            <input name="subject3" type="text" maxlength="50" id="subject3" class="app2-form-control" placeholder="Enter Subject3" autocomplete="off" />
+                        </div>
+                    </div>
+                
+                    <!-- Third Section: Salary and Additional Information -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Expected Salary<span class="app2-text-danger">*</span></label>
+                            <div class="app2-input-group">
+                                <input name="expectedSalary" type="text" maxlength="7" id="expectedSalary" class="app2-form-control" placeholder="Enter Expected Salary" autocomplete="off" />
+                                <span class="app2-input-group-addon">Per Month</span>
+                            </div>
+                        </div>
+                        <div id="currentSalaryDiv" class="app2-subdetail">
+                            <label class="app2-head-name">Current Salary</label>
+                            <div class="app2-input-group">
+                                <input name="currentSalary" type="text" maxlength="7" id="currentSalary" class="app2-form-control" placeholder="Enter Current Salary" autocomplete="off" />
+                                <span class="app2-input-group-addon">Per Month</span>
+                            </div>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Why you want to join our Institute?</label>
+                            <textarea name="joinReason" rows="2" cols="20" id="joinReason" class="app2-form-control" placeholder="Why you want to join our Institute..." autocomplete="off"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app3-main-panel">
+                    <div class="app3-panel-heading">
+                        <h3 class="app3-heading">Education Qualification Details (શૈક્ષણિક લાયકાત)</h3>
+                    </div>
+                    <div class="app3-panel-body app3-div-check-Qualification" style="overflow: auto;">
+                        <table class="app3-table app3-table-striped app3-table-bordered app3-mb0">
+                            <thead>
+                                <tr class="app3-input-sm">
+                                    <th class="app3-font12 app3-text-center">No</th>
+                                    <th class="app3-font12 app3-text-center">Name of Qualification</th>
+                                    <th class="app3-font12 app3-text-center">Passing Year</th>
+                                    <th class="app3-font12 app3-text-center">Board / University</th>
+                                    <th class="app3-font12 app3-text-center">Num of Trials</th>
+                                    <th class="app3-font12 app3-text-center">Percentage</th>
+                                    <th class="app3-font12 app3-text-center">MarkSheet/Certificate Upload</th>
+                                    <th class="app3-font12 app3-text-center">
+                                        <i title="Action" data-toggle="tooltip" class="fa fa-bolt app3-tooltips"></i>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="app3-input-sm">
+                                    <td class="app3-font-black">1.</td>
+                                    <td class="app3-font-black">
+                                        <input name="app3_txtExamName_0" type="text" maxlength="100" id="app3_txtExamName_0" class="app3-form-control app3-text-uppar" placeholder="Name of Qualification" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPassingYear_0" type="text" maxlength="4" id="app3_txtPassingYear_0" class="app3-form-control app3-text-uppar" placeholder="Passing Year" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtBoardName_0" type="text" maxlength="100" id="app3_txtBoardName_0" class="app3-form-control app3-text-uppar" placeholder="Board / University" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtAttemptCount_0" type="text" maxlength="2" id="app3_txtAttemptCount_0" class="app3-form-control app3-text-uppar" placeholder="Num of Trials" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPercentage_0" type="text" maxlength="5" id="app3_txtPercentage_0" class="app3-form-control app3-txtPercentage app3-text-uppar" placeholder="Percentage" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name="app3_fuMarkSheet_0" id="app3_fuMarkSheet_0" class="app3-form-control app3-fuMarkSheet" />
+                                    </td>
+                                    <td id="app3_tdMArtksheet_0" class="app3-text-center app3-widthLinkButton">
+                                        <a id="app3_lnkDeleteMarkSheetDetail_0" title="Delete" class="app3-lnkDeleteExpDetail app3-tooltips app3-trash app3-pr20 app3-font16" data-toggle="tooltip" href="javascript:void(0);" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="app3-input-sm">
+                                    <td class="app3-font-black">2.</td>
+                                    <td class="app3-font-black">
+                                        <input name="app3_txtExamName_1" type="text" maxlength="100" id="app3_txtExamName_1" class="app3-form-control app3-text-uppar" placeholder="Name of Qualification" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPassingYear_1" type="text" maxlength="4" id="app3_txtPassingYear_1" class="app3-form-control app3-text-uppar" placeholder="Passing Year" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtBoardName_1" type="text" maxlength="100" id="app3_txtBoardName_1" class="app3-form-control app3-text-uppar" placeholder="Board / University" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtAttemptCount_1" type="text" maxlength="2" id="app3_txtAttemptCount_1" class="app3-form-control app3-text-uppar" placeholder="Num of Trials" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPercentage_1" type="text" maxlength="5" id="app3_txtPercentage_1" class="app3-form-control app3-txtPercentage app3-text-uppar" placeholder="Percentage" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name="app3_fuMarkSheet_1" id="app3_fuMarkSheet_1" class="app3-form-control app3-fuMarkSheet" />
+                                    </td>
+                                    <td id="app3_tdMArtksheet_1" class="app3-text-center app3-widthLinkButton">
+                                        <a id="app3_lnkDeleteMarkSheetDetail_1" title="Delete" class="app3-lnkDeleteExpDetail app3-tooltips app3-trash app3-pr20 app3-font16" data-toggle="tooltip" href="javascript:void(0);" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- Additional rows can be added here similarly -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="app4-main-panel">
+                    <div class="app4-panel-heading">
+                        <h3 class="app4-head-name">Experience Details (અનુભવ)</h3>
+                    </div>
+                    <div class="app4-panel-body div-check-Experience">
+                        <table class="app4-table app4-table-striped app4-table-bordered app4-mb0">
+                            <tr class="input-sm">
+                                <th class="app4-font12 app4-text-center">No</th>
+                                <th class="app4-font12 app4-text-center">Organization Name</th>
+                                <th class="app4-font12 app4-text-center">Designation</th>
+                                <th class="app4-font12 app4-text-center">Start Date</th>
+                                <th class="app4-font12 app4-text-center">End Date</th>
+                                <th class="app4-font12 app4-text-center">Duration</th>
+                                <th class="app4-font12 app4-text-center">
+                                    <i title="Action" class="fa fa-bolt app4-tooltips"></i>
+                                </th>
+                            </tr>
+                            <tr class="input-sm">
+                                <td class="app4-text-black">1.</td>
+                                <td>
+                                    <input name="organizationName" type="text" maxlength="100" class="app4-form-control app4-text-uppar" placeholder="Organization Name" />
+                                </td>
+                                <td>
+                                    <input name="designation" type="text" maxlength="50" class="app4-form-control app4-text-uppar" placeholder="Designation" />
+                                </td>
+                                <td>
+                                    <input name="startDate" type="date" class="app4-form-control app4-datepicker app4-text-uppar" placeholder="Start Date (dd-mm-yyyy)" />
+                                </td>                                           
+                                <td>
+                                    <input name="endDate" type="date" class="app4-form-control app4-datepicker app4-text-uppar" placeholder="End Date (dd-mm-yyyy)" />
+                                </td>
+                                <td>
+                                    <span class="app4-form-control app4-lblDuration"></span>
+                                </td>
+                                <td class="app4-text-center">
+                                    <a title="Delete" class="app4-lnkDeleteExpDetail app4-tooltips app4-trash app4-font16" href="javascript:void(0);">
+                                        <span class="fa fa-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"></td>
+                                <td>
+                                    <label class="app4-checkbox-inline">
+                                        <input type="checkbox" name="running" />
+                                        <span class="app4-rdio-text app4-font-bold">Running</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="app4-table app4-table-condensed app4-table-responsive">
+                                <td colspan="7" class="app4-col-md-12">
+                                    <a title="Add" class="app4-lnkAddNewExp app4-tooltips" href="javascript:void(0);">
+                                        <i class="fa fa-plus"></i>Add 
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="app5-container">
+                    <div class="app5-header">
+                        <h3 class="app5-title">Certificate</h3>
+                    </div>
+                    <div class="app5-body" style="overflow: auto;">
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="font-weight: 700; font-size: 15px;">
+                                    (1)
+                                </label>
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">Title</label>
+                                <input name="certificateTitle1" type="text" maxlength="100" id="certificateTitle1" class="app5-form-control app5-text-uppar" placeholder="Enter Title" autocomplete="off" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">File</label>
+                                <input type="file" name="certificateFile1" id="certificateFile1" class="app5-form-control" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <a id="deleteCertificate1" title="Delete" class="app5-tooltips app5-trash" href="javascript:void(0);" style="font-size: 16px;">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr style="margin-bottom: 10px; margin-top: 5px;">
+                        
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="font-weight: 700; font-size: 15px;">
+                                    (2)
+                                </label>
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">Title</label>
+                                <input name="certificateTitle2" type="text" maxlength="100" id="certificateTitle2" class="app5-form-control app5-text-uppar" placeholder="Enter Title" autocomplete="off" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">File</label>
+                                <input type="file" name="certificateFile2" id="certificateFile2" class="app5-form-control" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <a id="deleteCertificate2" title="Delete" class="app5-tooltips app5-trash" href="javascript:void(0);" style="font-size: 16px;">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr style="margin-bottom: 10px; margin-top: 5px;">
+                        
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-full-width">
+                                <a id="addNewCertificate" title="Add" class="app5-tooltips app5-add-new" href="javascript:void(0);">
+                                    <i class="fa fa-plus"></i>Add 
+                                </a>
+                                <a id="uploadCertificates" class="app5-upload-button" href="javascript:void(0);">Upload Certificates</a>
+                            </div>
+                            <div class="app5-full-width">
+                                <span id="allCertificateMsg" class="app5-error-message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App6 Section -->
+                <div class="app6-container">
+                    <div class="app6-half">
+                        <div class="app6-panel">
+                            <div class="app6-header">
+                                <h3 class="app6-title">Upload Signature</h3>
+                            </div>
+                            <div class="app6-body">
+                                <div class="app6-form-group">
+                                    <input type="file" name="signature" id="signatureUpload" class="app6-form-control" />
+                                    <a id="uploadSignature" class="app6-upload-button" href="javascript:__doPostBack('signatureUpload','')">Upload</a>
+                                </div>
+                                <span id="signatureError" class="app6-error-message"></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="app6-half">
+                        <div class="app6-panel">
+                            <div class="app6-header">
+                                <h3 class="app6-title">Upload Resume</h3>
+                            </div>
+                            <div class="app6-body">
+                                <div class="app6-form-group">
+                                    <input type="file" name="resume" id="resumeUpload" class="app6-form-control" />
+                                    <a id="uploadResume" class="app6-upload-button" href="javascript:__doPostBack('resumeUpload','')">Upload</a>
+                                </div>
+                                <span id="resumeError" class="app6-error-message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App7 Section -->
+                <div class="app7-panel">
+    <div class="app7-header">
+        <h3 class="app7-title">Declaration</h3>
+    </div>
+    <div class="app7-body app7-bold">
+        <div class="app7-form-group">
+            <div class="app7-col" style="font-size: 15px; color: black;">
+                <label class="app7-inline app7-checkbox">
+                    <input id="MainContent_ARegStaff_chkAgreeMentYes" type="checkbox" name="ctl00$MainContent$ARegStaff$chkAgreeMentYes" />
+                    <span class="app7-text app7-bold">I endorse that, all the details mentioned above are true 
+                        <br />
+                        ઉપર દર્શાવેલ તમામ વિગતો સાચી છે, જેની હું બાંહેધરી આપું છું.
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+                </div>
+                <!-- App8 Section -->
+                <div class="app8-panel">
+    <div class="app8-form-group app8-font-bold">
+        <div class="app8-col" style="font-size: 15px; color: black;">
+            
+            Registration Fees: 0.00/- (Non Transferable and Non Refundable)
+            <br />
+            Transaction Charges may Apply.
+        </div>
+    </div>
+    <div class="app8-form-group">
+        <div class="app8-col">
+            <a id="MainContent_ARegStaff_lnkSave" class="app8-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkSave&#39;,&#39;&#39;)">Save</a>
+        </div>
+    </div>
+    <div class="app8-form-group" style="margin-top: 5px; font-size: 17px;">
+        <div class="app8-col">
+            <span id="MainContent_ARegStaff_spnCompulsory" class="app8-error"></span>
+        </div>
+    </div>
+                </div>
+            </div>
+            <!-- Add other form groups as needed -->
+        </div>
+    </div>
+</section>
+
+    
+</body>
+</html>
+
