@@ -37,23 +37,43 @@
     <section class="navsec">
       <nav class="navbar">
         <div class="hamburger" id="hamburger"></div>
-        <div
-          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[460px] ">
-          <!-- Logo clickable -->
-          <a href="/" class="nav-logo">
-            <img src="../assets/images/newimages/PNI New Logo .png"
-              alt="PNI Logo"
-              class="w-auto h-12" />
+     <div
+          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[560px]">
+
+          <!-- Logo -->
+          <a href="/" class="shrink-0">
+            <img src="../assets/images/newimages/PNI New Logo .png" alt="PNI Logo"
+              class="object-contain w-auto h-12" />
           </a>
 
-          <!-- Clickable phone number -->
-          <div class="hidden md:block">
-            <p class="mx-auto text-blue-500">For Inquiry contact</p>
-            <a href="tel:+919099255528"
-              class="text-sm text-blue-500 underline hover:underline sm:text-base">
-              +91 90992 55528
-            </a>
+          <!-- Inquiry Info (hidden on small screens) -->
+          <div
+            class="flex-col justify-center hidden leading-tight md:flex">
+
+            <div class="flex items-center gap-2">
+              <!-- Info Icon -->
+              <p class="text-sm font-medium text-gray-600 sm:text-base">
+                For inquiries, contact
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Phone Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-blue-600" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a2 2 0 01-2 2H8v2a9 9 0 009 9h2v-1a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              </svg>
+              <a href="tel:+919099255528"
+                class="text-sm text-blue-600 underline transition sm:text-base hover:text-blue-800 underline-offset-2">
+                +91 90992 55528
+              </a>
+            </div>
+
           </div>
+
         </div>
         <ul class="nav-links" id="navLinks">
           <a href="../index.html">
@@ -117,7 +137,7 @@
     </section>
 
     <section class="career__title page__title">
-      <div class="container">
+      <div class="container max-w-[80%] mx-auto">
         <h1 class="title__header">Career</h1>
       </div>
     </section>
@@ -159,10 +179,10 @@
 
     <section class="positions">
       <div class="container positions__container">
-        <div class="positions-left">
+        <div class="positions-left ">
           <h2 class="section__title">Current Openings</h2>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">1.	Tele Caller</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -192,7 +212,7 @@
             <!-- <button type="submit" class="form-submit button" id="form-submit"> <a href= "mailto: admisssion@pninstitite.in">Submit</a></button> -->
           </details>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">2.	Counselor</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -231,7 +251,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Counsler');">Apply Now</a> -->
           </details>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">3.	Branch Manager</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -283,7 +303,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Branch Manager');">Apply Now</a> -->
           </details>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">4.	Accountant</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -320,7 +340,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Accountant');">Apply Now</a> -->
           </details>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">5.  Marketing Executive</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -360,7 +380,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Marketing Executive');">Apply Now</a> -->
           </details>
 
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">6. Receptionist</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -394,7 +414,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Receptionist');">Apply Now</a> -->
           </details> 
           
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">7. Faculty</summary>
 
             <p class="responsibilities">Roles and Responsibilities</p>
@@ -451,7 +471,7 @@
             <!-- <a href="#getInTouch" class="button" onclick="carSel('Faculty');">Apply Now</a> -->
           </details> 
           
-          <details class="role-class">
+          <details class="role-class max-w-[80%] mx-auto">
             <summary class="role-summary">8. ASST. Teacher</summary>
             <p class="responsibilities">Roles and Responsibilities</p>
             <ul class="res-list">
@@ -1378,114 +1398,9 @@
 
   <!-- applciation end -->
 
-  <section class="test-cont">
 
-    <div class=" swiper">
-      <div class="slider-wrapper">
-        <h1 style="text-align:center; margin-bottom: 35px; margin-top: 25px; color: white; font-weight: bold;">Students Achievements</h1>
-        <div class="card-list swiper-wrapper">
-          
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery/JHALAK KATHIRIYA.png" alt="User Image" class="user-image">
-            <!-- <h2 class="user-name">James Wilson</h2> -->
-            <p class="user-profession">PN institute nurtures each student
-              uniquely, ensuring that every
-              individual finds their own path.The
-              faculty is elite, and they approach
-              teaching in a friendly manner. I am
-              glad to be a student of this institute!</p>
-          </div>
-  
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//JADHAV RIYA.png" alt="User Image" class="user-image">
-            <p class="user-profession">PN institute nurtures each student
-              uniquely, ensuring that every
-              individual finds their own path.The
-              faculty is elite, and they approach
-              teaching in a friendly manner. I am
-              glad to be a student of this institute!</p>
-            
-          </div>
-  
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//BANSI PATEL.png" alt="User Image" class="user-image">
-            <p class="user-profession">It was a very amazing experience
-              studing at PN institute. teachers and
-              staff are very supportive. They cleared
-              our each and every doubts.
-              teaching is so good.
-              </p>
-      
-          </div>
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//SAMAJPATI HARSHIL.png" alt="User Image" class="user-image">
-            <p class="user-profession">I feel very proud to be a part of P.N.
-              Institute.This school offers numerous
-              benefits that enhance the overall
-              learning experience.This school has
-              provided an exceptional educational
-              experience.</p>
-      
-          </div>
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//TANUSH PATEL.png" alt="User Image" class="user-image">
-            <p class="user-profession">PN institute played a crucial role in
-              my excellent board exam results.
-              Their expert guidance and effective
-              teaching methods were key to my
-              success. I highly recommend PN
-              institute to anyone aiming for
-              academic excellence.</p>
-      
-          </div>
-  
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//MOHIT YADAV.png" alt="User Image" class="user-image">
-            <p class="user-profession">I used to regularly revise the class
-              notes and solve practice tests
-              provided by (P. N. Institute/ our class
-              teacher). This helped me to boost my
-              confidence and also kept me on track
-              to achieve my goal of scoring best
-              marks in board exams.</p>
-  
-          </div>
-  
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//HASYA SHAH.png" alt="User Image" class="user-image">
-            <p class="user-profession">I used to regularly revise the class
-              notes and solve practice tests
-              provided by (P. N. Institute/ our class
-              teacher). This helped me to boost my
-              confidence and also kept me on track
-              to achieve my goal of scoring best
-              marks in board exams.</p>
-      
-          </div>
-  
-          <div class="test-card-item swiper-slide">
-            <img src="../images/ourgallery//MANAN SONAVANE.png" alt="User Image" class="user-image">
-            <p class="user-profession">I am extremely satisfied with my
-              board exam results, thanks to the
-              excellent guidance and support
-              provided by the PN institute. The
-              dedicated faculty and well-structured
-              curriculum were essential to my
-              success. I highly recommend this
-              institute for anyone aiming to achieve
-              top academic results.</p>
-      
-          </div>
-        </div>
-  
-        <div class="swiper-pagination"></div>
-        <div class="swiper-slide-button swiper-button-prev" ></div>
-        <div class="swiper-slide-button swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
 
-    <section class="footer max-w-[90%] md:max-w-[100%] mx-auto">
+   <section class="footer ">
       <div
         class="container footer-top bg-gradient-to-r from-[#0A0A23] to-[#A33A17] text-white rounded-t-xl px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="ft-left">
@@ -1507,7 +1422,8 @@
 
       <div
         class="footer-bottom bg-[#0A0A23] text-white px-6 py-10 md:py-12 ">
-        <div class="container grid gap-10 md:grid-cols-4">
+        <div
+          class="container grid gap-10 md:grid-cols-4 max-w-[90%] md:max-w-[90%] mx-auto">
           <!-- About -->
           <div>
             <img src="../dist/images/gallery/PNI White Logo.png" alt

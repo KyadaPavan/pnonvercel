@@ -642,8 +642,44 @@ input[type=submit]:hover {
     <section class="navsec">
       <nav class="navbar">
         <div class="hamburger" id="hamburger"></div>
-        <div class="nav-logo">
-          <img src="../assets/images/newimages/PNI New Logo .png" alt />
+        <div
+          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[560px]">
+
+          <!-- Logo -->
+          <a href="/" class="shrink-0">
+            <img src="../assets/images/newimages/PNI New Logo .png"
+              alt="PNI Logo"
+              class="object-contain w-auto h-12" />
+          </a>
+
+          <!-- Inquiry Info (hidden on small screens) -->
+          <div
+            class="flex-col justify-center hidden leading-tight md:flex">
+
+            <div class="flex items-center gap-2">
+              <!-- Info Icon -->
+              <p class="text-sm font-medium text-gray-600 sm:text-base">
+                For inquiries, contact
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Phone Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-blue-600" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a2 2 0 01-2 2H8v2a9 9 0 009 9h2v-1a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              </svg>
+              <a href="tel:+919099255528"
+                class="text-sm text-blue-600 underline transition sm:text-base hover:text-blue-800 underline-offset-2">
+                +91 90992 55528
+              </a>
+            </div>
+
+          </div>
+
         </div>
         <ul class="nav-links" id="navLinks">
           <a href="../index.html">
@@ -651,20 +687,8 @@ input[type=submit]:hover {
           </a>
           <a href="#">
             <li class="nav__link sub-list-parent" id="subListHandle">
-              Pay Fees <span class="down-arrow">&gt;</span>
-              <ul class="sub-list" id="subList">
-                <li class="sub-list-item">
-                  <a href="https://rzp.io/l/iwk8p7doE">Primary</a>
-                </li>
-                <li class="sub-list-item">
-                  <a href="https://rzp.io/l/iwk8p7doE">Secondary</a>
-                </li>
-                <li class="sub-list-item">
-                  <a
-                    href="https://pages.razorpay.com/pl_LBs3XM2DHZjmJU/view">Higher
-                    Secondary</a>
-                </li>
-              </ul>
+              Pay Fees
+
             </li>
           </a>
           <a href="overview.html">
@@ -721,8 +745,8 @@ input[type=submit]:hover {
     </section>
 
     <section class="student__title page__title">
-      <div class="container">
-        <h1 class="title__header">Student Corner</h1>
+      <div class="container max-w-[80%] mx-auto">
+        <h1 class="title__header ">Student Corner</h1>
       </div>
     </section>
 
@@ -826,9 +850,9 @@ input[type=submit]:hover {
       </div>
     </section>
 
-    <section class="real" id="pnAdvantages">
+    <section class="real " id="pnAdvantages">
       <div class="container section__title">PN Advantages</div>
-      <div class="container real__container">
+      <div class="container real__container max-w-[80%] mx-auto">
         <div class="realcat">
           <p class="realcat__title">Study Material</p>
           <p class="realcat__des">
@@ -1051,7 +1075,8 @@ input[type=submit]:hover {
     <section class="add-review" id="review">
       <div class="container add-review__container">
         <h2 class="section__title">Give Us a Review</h2>
-        <form action="/submit-review" method="POST" class="registration-form"
+        <form action="/submit-review" method="POST"
+          class="registration-form max-w-[80%] mx-auto"
           data-aos="fade-left" enctype="multipart/form-data">
           <div class="row">
             <div class="col-25">
@@ -1402,7 +1427,7 @@ input[type=submit]:hover {
         });
       </script>
     </section>
-    <section class="footer max-w-[90%] md:max-w-[100%] mx-auto">
+    <section class="footer ">
       <div
         class="container footer-top bg-gradient-to-r from-[#0A0A23] to-[#A33A17] text-white rounded-t-xl px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="ft-left">
@@ -1424,7 +1449,8 @@ input[type=submit]:hover {
 
       <div
         class="footer-bottom bg-[#0A0A23] text-white px-6 py-10 md:py-12 ">
-        <div class="container grid gap-10 md:grid-cols-4">
+        <div
+          class="container grid gap-10 md:grid-cols-4 max-w-[90%] md:max-w-[90%] mx-auto">
           <!-- About -->
           <div>
             <img src="../dist/images/gallery/PNI White Logo.png" alt

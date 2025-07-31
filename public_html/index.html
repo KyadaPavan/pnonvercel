@@ -110,62 +110,89 @@
 
   <body>
 
-    <header class="fixed top-0 left-0 z-50 w-full bg-white shadow">
+    <!-- <header class="fixed top-0 left-0 z-50 w-full bg-white shadow">
       <div
-        class="flex flex-wrap items-center justify-between  pt-3  w-[80%] mx-auto">
-        <!-- Left: Logo and social icons -->
+        class="flex flex-wrap items-center justify-between  pt-3  w-[95%] mx-auto">
+ 
         <div>
           <img src="assets/images/newimages/PNI New Logo .png" alt="PN Logo"
             class="object-contain h-14" />
         </div>
 
-        <!-- Middle: Contact Info -->
         <div class="flex-col hidden text-sm text-right md:flex">
           <div class="flex items-center gap-1">
-            <span>📞</span><span>+91 7433986083</span>
+            <span>📞</span>
+            <a href="tel:+917433986083" class="hover:underline">+91
+              7433986083</a>
           </div>
           <div class="flex items-center gap-1">
-            <span>✉️</span><span>info@pninstitute.in</span>
+            <span>✉️</span>
+            <a href="mailto:info@pninstitute.in"
+              class="hover:underline">info@pninstitute.in</a>
           </div>
         </div>
 
-        <!-- Right: Buttons -->
+   
         <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
-          <button
-            class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1 text-base">PNGOE
-            App Login</button>
-          <button
-            class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1 ">Pay
-            Fee Online</button>
-          <button
-            class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1 ">Admission
-            Enquiry</button>
-          <button
-            class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1 ">Admission
-            Registration</button>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.pngroupapp.wme.parentsapplication"
+            target="_blank">
+            <button
+              class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1 text-base">
+              PNGOE App Login
+            </button>
+          </a>
+          <a href="https://pages.razorpay.com/pl_LBs3XM2DHZjmJU/view"
+            target="_blank">
+            <button
+              class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1">
+              Pay Fee Online
+            </button>
+          </a>
+          <a href="pages/contact.html">
+            <button
+              class="bg-[#766DCB] hover:bg-[#5f58a1] text-white px-3 py-1">
+              Admission Enquiry
+            </button>
+          </a>
+          <a href="pages/contact.html">
+            <button
+              class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1">
+              Admission Registration
+            </button>
+          </a>
+          <a href="https://pninstitute.in/pages/pace.html" target="_blank">
+            <button
+              class="bg-[#A33A17] hover:bg-[#8c2f10] text-white px-3 py-1">
+              Pace
+            </button>
+          </a>
         </div>
+
       </div>
 
-      <div class="flex gap-8 w-[80%] mx-auto justify-between">
-        <div class="flex mt-2 md:mt-0">
-          <a href="#"><img
-              src="https://img.icons8.com/fluency/24/000000/facebook-new.png" /></a>
-          <a href="#"><img
-              src="https://img.icons8.com/fluency/24/instagram-new.png" /></a>
-          <a href="#"><img
-              src="https://img.icons8.com/fluency/24/youtube-play.png" /></a>
-          <a href="#"><img
-              src="https://img.icons8.com/fluency/24/whatsapp.png" /></a>
-          <a href="#"><img
-              src="https://img.icons8.com/fluency/24/marker.png" /></a>
+      <div class="flex gap-8 w-[95%] mx-auto justify-between">
+        <div class="flex gap-2 mt-2 md:mt-0">
+          <a href="https://www.facebook.com/pninstitute" target="_blank"><img
+              src="./images/social icon 1.png" class="w-6 h-6" /></a>
+          <a href="https://www.instagram.com/p.n.institute/"
+            target="_blank"><img
+              src="./images/social icon 2.png" class="w-6 h-6" /></a>
+          <a href="https://www.youtube.com/@P.N.Institute" target="_blank"><img
+              src="./images/social icon 5.png" class="w-6 h-6" /></a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=7433986083&text&type=phone_number&app_absent=0"
+            target="_blank"><img
+              src="./images/social icon 4.png" class="w-6 h-6" /></a>
+          <a href="#" target="_blank"><img
+              src="./images/social icon 5.png" class="w-6 h-6" /></a>
         </div>
-        <div class="relative mt-2 w-[80%] flex gap-0 bg-yellow-400">
-
+        <div class="relative mt-2 w-[90%] flex gap-0 bg-yellow-400">
           <div class="relative w-[50px] h-[36px] overflow-hidden">
-            <!-- White Background -->
+       
             <div class="absolute inset-0 z-0 bg-white"></div>
 
-            <!-- Yellow Diagonal Overlay -->
+
             <div
               class="absolute inset-0 z-10 bg-yellow-400 clip-diagonal"></div>
           </div>
@@ -174,49 +201,83 @@
                clip-path: polygon(100% 0, 100% 100%, 0 100%);
             }
           </style>
-
           <nav
             class="relative z-10 flex flex-wrap justify-start w-full py-2 ml-10 text-sm font-medium text-black bg-yellow-400">
             <ul class="flex flex-wrap justify-center gap-4">
               <li><a href="#" class="hover:underline">Home</a></li>
               <li>|</li>
-              <li><a href="#" class="hover:underline">About
-                  Us</a></li><li>|</li>
-              <li><a href="#"
-                  class="hover:underline">Facilities</a></li><li>|</li>
-              <li><a href="#"
-                  class="hover:underline">Admissions</a></li><li>|</li>
-              <li><a href="#" class="hover:underline">Media</a></li><li>|</li>
-              <li><a href="#" class="hover:underline">Contact
-                  Us</a></li><li>|</li>
-              <li><a href="#" class="hover:underline">List Of Holidays
-                  2025-26</a></li><li>|</li>
-              <li><a href="#" class="hover:underline">Exam Schedule</a></li>
+              <li><a href="https://rzp.io/l/iwk8p7doE"
+                  class="hover:underline">Pay Fees</a></li>
+              <li>|</li>
+              <li><a href="pages/overview.html"
+                  class="hover:underline">Overview</a></li>
+              <li>|</li>
+              <li><a href="pages/faq.html" class="hover:underline">Faq</a></li>
+              <li>|</li>
+              <li><a href="pages/courses.html"
+                  class="hover:underline">Courses</a></li>
+              <li>|</li>
+              <li><a href="pages/student.html" class="hover:underline">Students
+                  Corner</a></li>
+              <li>|</li>
+              <li><a href="#ourGalleryHome"
+                  class="hover:underline">Media</a></li>
+              <li>|</li>
+              <li><a href="pages/result.html"
+                  class="hover:underline">Result</a></li>
+              <li>|</li>
+              <li><a href="#" class="hover:underline">List of Holidays
+                  2025-26</a></li>
+              <li>|</li>
+              <li><a href="pages/contact.html" class="hover:underline">Contact
+                  Us</a></li>
             </ul>
           </nav>
         </div>
       </div>
 
-    </header>
+    </header> -->
 
-    <!-- <section class="navsec">
+    <section class="navsec">
       <nav class="navbar">
         <div class="hamburger" id="hamburger"></div>
         <div
-          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[460px] ">
-    
-          <a href="/" class="nav-logo">
+          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[560px]">
+
+          <!-- Logo -->
+          <a href="/" class="shrink-0">
             <img src="assets/images/newimages/PNI New Logo .png" alt="PNI Logo"
-              class="w-auto h-12" />
+              class="object-contain w-auto h-12" />
           </a>
 
-          <div class="hidden md:block">
-            <p class="mx-auto text-blue-500">For Inquiry contact</p>
-            <a href="tel:+919099255528"
-              class="text-sm text-blue-500 underline hover:underline sm:text-base">
-              +91 90992 55528
-            </a>
+          <!-- Inquiry Info (hidden on small screens) -->
+          <div
+            class="flex-col justify-center hidden leading-tight md:flex">
+
+            <div class="flex items-center gap-2">
+              <!-- Info Icon -->
+              <p class="text-sm font-medium text-gray-600 sm:text-base">
+                For inquiries, contact
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Phone Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-blue-600" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a2 2 0 01-2 2H8v2a9 9 0 009 9h2v-1a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              </svg>
+              <a href="tel:+919099255528"
+                class="text-sm text-blue-600 underline transition sm:text-base hover:text-blue-800 underline-offset-2">
+                +91 90992 55528
+              </a>
+            </div>
+
           </div>
+
         </div>
 
         <ul class="nav-links" id="navLinks">
@@ -224,7 +285,6 @@
             <li class="nav__link">Home</li>
           </a>
 
-  
           <li class="nav__link">
             <a
               href="https://rzp.io/l/iwk8p7doE"
@@ -237,7 +297,7 @@
           <a href="pages/overview.html">
             <li class="nav__link">Overview</li>
           </a>
-        
+
           <a href="pages/faq.html">
             <li class="nav__link">Faq</li>
           </a>
@@ -248,8 +308,6 @@
             <li class="nav__link">Student Corner</li>
           </a>
 
-   
-           
           <a href="pages/result.html">
             <li class="nav__link">Results</li>
           </a>
@@ -259,14 +317,14 @@
           <a href="pages/contact.html">
             <li class="nav__link">Contact Us</li>
           </a>
-          <a href="https://pace.pninstitute.in">
+          <a href="https://pninstitute.in/pages/pace.html" target="_blank">
             <li class="nav__link button glowing_button">
               &nbsp &nbsp &nbsp PACE &nbsp &nbsp &nbsp
             </li>
           </a>
         </ul>
       </nav>
-    </section> -->
+    </section>
 
     <!-- <section class="hero">
       <img src="assets/images/newimages/1.jpg" alt="" />
@@ -277,141 +335,165 @@
     </section> -->
 
     <!-- <section class="hero-mobile">
-      <img src="assets/imgs1/Always opt for best 4.jpg" alt="" />
-      <img src="assets/imgs1/Always opt for best 6.jpg" alt="" />
-      <img src="assets/imgs1/Always opt for best.jpg" alt="" />
+      <img src="assets/imgs1/Always opt for best 4.jpg" alt />
+      <img src="assets/imgs1/Always opt for best 6.jpg" alt />
+      <img src="assets/imgs1/Always opt for best.jpg" alt />
     </section> -->
-    <section class="hero">
-      <!-- <div id="carouselExampleInterval" class="carousel slide ccancel" data-bs-ride="carousel">
-      <div class="carousel-inner ">
-        <div class="carousel-item active" data-bs-interval="1000">
-          <img src="images/new pn banner.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="images/new pn banner 2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/new pn banner 3.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/new pn banner 4.png" class="d-block w-100" alt="...">
-        </div>
-        <span><button class="carousel-control-prev dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button></span>
-        <span><button class="carousel-control-next dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button></span>
-      </div>
-      </div> -->
-      <div class="mt-20 mmhero-carousel ccancel">
-        <div class="mmhero-carousel-images">
-          <img
-            src="images/PNI Banner 01.jpg"
-            alt="Image 1"
-            class="mmhero-carousel-image" />
-          <img
-            src="images/PNI Banner 02.jpg"
-            alt="Image 2"
-            class="mmhero-carousel-image" />
-          <img
-            src="images/PNI Banner 03.jpg"
-            alt="Image 3"
-            class="mmhero-carousel-image" />
-          <img
-            src="images/PNI Banner 04.jpg"
-            alt="Image 4"
-            class="mmhero-carousel-image" />
-          <img
-            src="images/PNI Banner 05.jpg"
-            alt="Image 5"
-            class="mmhero-carousel-image" />
-          <img
-            src="images/PNI Banner 06.jpg"
-            alt="Image 6"
-            class="mmhero-carousel-image" />
-          <!-- <img src="images/new pn banner 4.png" alt="Image 4" class="mmhero-carousel-image"> -->
-        </div>
-        <button class="mmhero-prev mmbutton" onclick="changeSlide(-1)">
-          &#10094;
-        </button>
-        <button class="mmhero-next mmbutton" onclick="changeSlide(1)">
-          &#10095;
-        </button>
-      </div>
-    </section>
-    <section class="hero-mobile">
-      <div
-        id="carouselExampleInterval"
-        class="carousel slide ccancel"
-        data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
-            <img
-              src="images/PNI Mobile Banner 01.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="images/PNI Mobile Banner 02.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="images/PNI Mobile Banner 03.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="images/PNI Mobile Banner 04.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="images/PNI Mobile Banner 05.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="images/PNI Mobile Banner 06.jpg"
-              class="d-block w-100"
-              alt="..." />
-          </div>
 
-          <div class="carousel-item"></div>
-          <span><button
-              class="carousel-control-prev dark"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="prev">
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button></span>
-          <span><button
-              class="carousel-control-next dark"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="next">
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button></span>
-        </div>
+    <style>
+      .carousel {
+        scroll-behavior: smooth;
+      }
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <!-- Carousel Container -->
+    <div class="relative hidden w-full mt-20 overflow-hidden md:block">
+
+      <!-- Scrollable Images Wrapper -->
+      <div id="carousel"
+        class="flex w-full overflow-x-scroll carousel snap-x snap-mandatory">
+        <img src="./images/PNI Banner 01.jpg"
+          class="flex-shrink-0 w-full snap-start"
+          alt="Banner 1">
+        <img src="./images/PNI Banner 02.jpg"
+          class="flex-shrink-0 w-full snap-start"
+          alt="Banner 2">
+        <img src="./images/PNI Banner 03.jpg"
+          class="flex-shrink-0 w-full object snap-start"
+          alt="Banner 3">
+        <img src="./images/PNI Banner 04.jpg"
+          class="flex-shrink-0 w-full snap-start"
+          alt="Banner 4">
+        <img src="./images/PNI Banner 05.jpg"
+          class="flex-shrink-0 w-full snap-start"
+          alt="Banner 5">
+        <img src="./images/PNI Banner 06.jpg"
+          class="flex-shrink-0 w-full snap-start"
+          alt="Banner 6">
       </div>
-      <!-- note 
-        Always create a image 
-        -->
-    </section>
+
+      <!-- Prev Button -->
+      <button id="prevBtn"
+        class="absolute p-3 text-black transition-all duration-300 -translate-y-1/2 bg-white rounded-full shadow-lg left-5 top-1/2 bg-opacity-10 hover:bg-opacity-60 hover:scale-110 hover:shadow-xl">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button id="nextBtn"
+        class="absolute p-3 text-black transition-all duration-300 -translate-y-1/2 bg-white rounded-full shadow-lg right-5 top-1/2 bg-opacity-10 hover:bg-opacity-60 hover:scale-110 hover:shadow-xl">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+    </div>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let scrollAmount = window.innerWidth;
+
+      prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      // Auto Scroll Every 4 seconds
+      setInterval(() => {
+        if (carousel.scrollLeft + scrollAmount >= carousel.scrollWidth) {
+          carousel.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }, 4000);
+    </script>
+
+    <!-- Mobile Carousel: visible only on small screens -->
+    <div class="relative w-full h-[55vh] overflow-hidden block md:hidden mt-12">
+
+      <!-- Scrollable Image Container -->
+      <div id="mobileCarousel"
+        class="flex overflow-x-scroll carousel snap-x snap-mandatory scroll-smooth">
+        <img src="./images/PNI Mobile Banner 01.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 1" />
+        <img src="./images/PNI Mobile Banner 02.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 2" />
+        <img src="./images/PNI Mobile Banner 03.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 3" />
+        <img src="./images/PNI Mobile Banner 04.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 4" />
+        <img src="./images/PNI Mobile Banner 05.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 5" />
+        <img src="./images/PNI Mobile Banner 06.jpg"
+          class="flex-shrink-0 h-full snap-start"
+          alt="Mobile Banner 6" />
+      </div>
+
+      <!-- Prev Button -->
+      <button id="mobilePrevBtn"
+        class="absolute p-2 text-black transition duration-300 -translate-y-1/2 bg-white rounded-full shadow-md left-3 top-1/2 bg-opacity-10 hover:scale-110 hover:bg-opacity-60">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button id="mobileNextBtn"
+        class="absolute p-2 text-black transition duration-300 -translate-y-1/2 bg-white rounded-full shadow-md right-3 top-1/2 bg-opacity-10 hover:scale-110 hover:bg-opacity-60">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Script for Auto Scroll + Manual Controls -->
+    <script>
+      const mobileCarousel = document.getElementById("mobileCarousel");
+      const mobilePrevBtn = document.getElementById("mobilePrevBtn");
+      const mobileNextBtn = document.getElementById("mobileNextBtn");
+      const scrollWidth = window.innerWidth;
+
+      mobilePrevBtn.addEventListener("click", () => {
+        mobileCarousel.scrollBy({ left: -scrollWidth, behavior: "smooth" });
+      });
+
+      mobileNextBtn.addEventListener("click", () => {
+        mobileCarousel.scrollBy({ left: scrollWidth, behavior: "smooth" });
+      });
+
+      // Auto Scroll for mobile carousel
+      setInterval(() => {
+        if (mobileCarousel.scrollLeft + scrollWidth >= mobileCarousel.scrollWidth) {
+          mobileCarousel.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          mobileCarousel.scrollBy({ left: scrollWidth, behavior: "smooth" });
+        }
+      }, 4000);
+    </script>
 
     <section class="unione bg-gradient-to-r from-[#0A0A23] to-[#A33A17]">
       <div class="unione__container">
@@ -1170,58 +1252,59 @@
     <section
       class="px-4 py-16 text-white" style="
         background-image: url('./images/Beyond the Classroom Background.png');
-      ">
+      "
+      id="ourGalleryHome">
       <h2 class="mb-12 text-3xl font-bold text-center md:text-4xl lg:text-5xl">
         Beyond the Classroom - Life at PN
       </h2>
-
       <div class="grid gap-8 mx-auto max-w-7xl md:grid-cols-2 lg:grid-cols-3">
         <!-- Navratri -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/Navratri.png" alt="Navratri"
-            class="object-cover w-full h-64" />
+          <img src="./images/Navratri.jpg" alt="Navratri"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">NAVRATRI</div>
         </div>
 
         <!-- Picnic -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/Picnic.png" alt="Picnic"
-            class="object-cover w-full h-64" />
+          <img src="./images/Picnic.jpg" alt="Picnic"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">PICNIC</div>
         </div>
 
         <!-- Field Trip -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/Field Trip.png" alt="Field Trip"
-            class="object-cover w-full h-64" />
+          <img src="./images/Field Trip.jpg" alt="Field Trip"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">FIELD
             TRIP</div>
         </div>
 
         <!-- Sports Day -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/Sports.png" alt="Sports Day"
-            class="object-cover w-full h-64" />
+          <img src="./images/Sports.jpg" alt="Sports Day"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">SPORTS
             DAY</div>
         </div>
 
         <!-- Cricket League -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/PN Cricket League.png" alt="Cricket League"
-            class="object-cover w-full h-64" />
+          <img src="./images/PN Cricket League.jpg" alt="Cricket League"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">PN CRICKET
             LEAGUE</div>
         </div>
 
         <!-- Award Ceremony -->
         <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <img src="./images/Award Ceremony.png" alt="Award Ceremony"
-            class="object-cover w-full h-64" />
+          <img src="./images/Award Ceremony.jpg" alt="Award Ceremony"
+            class="object-cover w-full h-64 transition duration-300 ease-in-out transform hover:scale-105" />
           <div class="py-3 font-semibold text-center text-black">AWARD
             CEREMONY</div>
         </div>
       </div>
+
     </section>
 
     <!-- <style>
@@ -2139,14 +2222,16 @@
     </div>
   </section> -->
 
-    <section class="footer max-w-[90%] md:max-w-[100%] mx-auto">
+    <section class="footer ">
+
       <div
         class="container footer-top bg-gradient-to-r from-[#0A0A23] to-[#A33A17] text-white rounded-t-xl px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="ft-left">
           <p class="mb-2 text-lg font-semibold left-up">Apply now for PACE,
             Gujarat's largest scholarship exam</p>
           <p class="max-w-lg text-sm left-down">
-            PACE is a State-level exam that helps students discover their hidden
+            PACE is a State-level exam that helps students discover their
+            hidden
             talents and achieve their best.
           </p>
         </div>
@@ -2161,7 +2246,8 @@
 
       <div
         class="footer-bottom bg-[#0A0A23] text-white px-6 py-10 md:py-12 ">
-        <div class="container grid gap-10 md:grid-cols-4">
+        <div
+          class="container grid gap-10 md:grid-cols-4 max-w-[90%] md:max-w-[90%] mx-auto">
           <!-- About -->
           <div>
             <img src="../dist/images/gallery/PNI White Logo.png" alt
@@ -2170,10 +2256,12 @@
               fields of Science, Commerce to discover and transmit
               knowledge.</p>
             <div class="flex mt-4 space-x-4">
-              <a href="https://www.facebook.com/pninstitute/" target="_blank"><i
+              <a href="https://www.facebook.com/pninstitute/"
+                target="_blank"><i
                   class="text-white fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/p.n.institute/"
-                target="_blank"><i class="text-white fab fa-instagram"></i></a>
+                target="_blank"><i
+                  class="text-white fab fa-instagram"></i></a>
               <a href="https://twitter.com/PNInstitute1" target="_blank"><i
                   class="text-white fab fa-twitter"></i></a>
               <a href="https://www.youtube.com/@P.N.Institute"
@@ -2186,7 +2274,8 @@
             <p class="mb-4 text-lg font-semibold">Address</p>
             <a href="https://g.co/kgs/BWBxdk">
               <p class="flex items-start text-sm"><i
-                  class="mt-1 mr-2 fas fa-map-marker-alt"></i>Gajanan Heights Nr
+                  class="mt-1 mr-2 fas fa-map-marker-alt"></i>Gajanan Heights
+                Nr
                 Darbar Chokdi, Manjalpur, Vadodara - 390011</p>
             </a>
             <p class="mt-2 text-sm"><i class="fas fa-phone-alt"></i><a
@@ -2230,6 +2319,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <section

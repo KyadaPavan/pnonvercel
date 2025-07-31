@@ -27,22 +27,43 @@
       <nav class="navbar">
         <div class="hamburger" id="hamburger"></div>
         <div
-          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[460px] ">
-          <!-- Logo clickable -->
-          <a href="/" class="nav-logo">
+          class="flex items-center gap-4 w-[200px] sm:w-[300px] lg:w-[560px]">
+
+          <!-- Logo -->
+          <a href="/" class="shrink-0">
             <img src="../assets/images/newimages/PNI New Logo .png"
               alt="PNI Logo"
-              class="w-auto h-12" />
+              class="object-contain w-auto h-12" />
           </a>
 
-          <!-- Clickable phone number -->
-          <div class="hidden md:block">
-            <p class="mx-auto text-blue-500">For Inquiry contact</p>
-            <a href="tel:+919099255528"
-              class="text-sm text-blue-500 underline hover:underline sm:text-base">
-              +91 90992 55528
-            </a>
+          <!-- Inquiry Info (hidden on small screens) -->
+          <div
+            class="flex-col justify-center hidden leading-tight md:flex">
+
+            <div class="flex items-center gap-2">
+              <!-- Info Icon -->
+              <p class="text-sm font-medium text-gray-600 sm:text-base">
+                For inquiries, contact
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Phone Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-blue-600" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a2 2 0 01-2 2H8v2a9 9 0 009 9h2v-1a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              </svg>
+              <a href="tel:+919099255528"
+                class="text-sm text-blue-600 underline transition sm:text-base hover:text-blue-800 underline-offset-2">
+                +91 90992 55528
+              </a>
+            </div>
+
           </div>
+
         </div>
         <ul class="nav-links" id="navLinks">
           <a href="../index.html">
