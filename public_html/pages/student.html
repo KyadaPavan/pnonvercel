@@ -666,15 +666,15 @@ input[type=submit]:hover {
             <div class="flex items-center gap-2">
               <!-- Phone Icon -->
               <svg xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 text-blue-600" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
+                class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   stroke-width="2"
-                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a2 2 0 01-2 2H8v2a9 9 0 009 9h2v-1a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+                  d="M3 5a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 01.293.707V7a1 1 0 01-.293.707L9 9.414a1 1 0 00-.293.707v.586a11.05 11.05 0 004.243 4.243h.586a1 1 0 00.707-.293L15.707 13a1 1 0 01.707-.293H19a2 2 0 012 2v3a2 2 0 01-2 2h-2C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <a href="tel:+919099255528"
+              <a href="tel:+917433986083"
                 class="text-sm text-blue-600 underline transition sm:text-base hover:text-blue-800 underline-offset-2">
-                +91 90992 55528
+                +91 74339 86083
               </a>
             </div>
 
@@ -691,38 +691,36 @@ input[type=submit]:hover {
 
             </li>
           </a>
-          <a href="overview.html">
+          <a href="#">
             <li class="nav__link">Overview</li>
           </a>
           <!-- <a href="admission.html">
             <li class="nav__link">Admissions</li>
           </a> -->
           <a href="faq.html">
-            <li class="nav__link">Faq</li>
+            <li class="nav__link">FAQ</li>
           </a>
           <a href="courses.html">
             <li class="nav__link">Courses</li>
           </a>
-
           <a href="student.html">
             <li class="nav__link">Student Corner</li>
           </a>
-
           <!-- <a href="#">
             <li class="nav__link sub-list-parent" id="subListHandle">
               Student Corner <span class="down-arrow">&gt;</span>
               <ul class="sub-list" id="subList">
                 <li class="sub-list-item">
-                  <a href="#pnAdvantages">PN Advantages</a>
+                  <a href="student.html#pnAdvantages">PN Advantages</a>
                 </li>
                 <li class="sub-list-item">
-                  <a href="#alumni">Alumni Registration</a>
+                  <a href="student.html#alumni">Alumni Registration</a>
                 </li>
                 <li class="sub-list-item">
-                  <a href="#review">Give Us Review</a>
+                  <a href="student.html#review">Give Us Review</a>
                 </li>
                 <li class="sub-list-item">
-                  <a href="#testimonials">Testimonials</a>
+                  <a href="student.html#testimonials">Testimonials</a>
                 </li>
               </ul>
             </li>
@@ -752,7 +750,11 @@ input[type=submit]:hover {
     </section>
 
     <section class="material" id="material">
-      <h2 class="section__title">Study Material</h2>
+
+      <div class="container text-4xl font-bold text-center lg:text-5xl ">
+        Study Material
+      </div>
+
       <div class="container material__container">
         <!-- <form action="" class="material-form">
                <select name="selectBoard" id="">
@@ -852,7 +854,11 @@ input[type=submit]:hover {
     </section>
 
     <section class="real " id="pnAdvantages">
-      <div class="container section__title">PN Advantages</div>
+
+      <div class="container text-4xl font-bold text-center lg:text-5xl ">
+        PN Advantages
+      </div>
+
       <div class="container real__container max-w-[80%] mx-auto">
         <div class="realcat">
           <p class="realcat__title">Study Material</p>
@@ -995,7 +1001,10 @@ input[type=submit]:hover {
 
     <section class="alumni" id="alumni">
       <div class="container alumni__container">
-        <h2 class="section__title">Alumni Registration</h2>
+        <div class="container text-4xl font-bold text-center lg:text-5xl ">
+          Alumni Registration
+        </div>
+
         <form action="/submit-alumni" method="POST" class="alumni-reg">
           <h2>Personal Info</h2>
           <div>
@@ -1075,7 +1084,11 @@ input[type=submit]:hover {
 
     <section class="add-review" id="review">
       <div class="container add-review__container">
-        <h2 class="section__title">Give Us a Review</h2>
+
+        <div class="container text-4xl font-bold text-center lg:text-5xl ">
+          Give Us a Review
+        </div>
+
         <form action="/submit-review" method="POST"
           class="registration-form max-w-[80%] mx-auto"
           data-aos="fade-left" enctype="multipart/form-data">
@@ -1414,7 +1427,7 @@ input[type=submit]:hover {
             },
             loop: true,
             autoplay: {
-              delay: 3000,
+              delay: 1500,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             },
@@ -1440,7 +1453,7 @@ input[type=submit]:hover {
           </p>
         </div>
         <div class="mr-6 ft-right">
-          <a href="https://pace.pninstitute.in/" target="_blank">
+          <a href="pages/pace.html" target="_blank">
             <div
               class="bg-white text-[#A33A17] font-semibold px-6 py-2 rounded-md hover:opacity-90 transition">Apply
               Now</div>
@@ -1454,7 +1467,7 @@ input[type=submit]:hover {
           class="container grid gap-10 md:grid-cols-4 max-w-[90%] md:max-w-[90%] mx-auto">
           <!-- About -->
           <div>
-            <img src="../dist/images/gallery/PNI White Logo.png" alt
+            <img src="../images/PNI New.png" alt
               class="mb-4">
             <p class="text-sm">P. N. Institute educates its students in the
               fields of Science, Commerce to discover and transmit
