@@ -1,34 +1,47 @@
 /* Container and border styles */
 .app-main-panel {
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
-    padding: 0; /* Remove padding to ensure heading and content are aligned properly */
+    padding: 0;
+    /* Remove padding to ensure heading and content are aligned properly */
     margin-left: auto;
     margin-right: auto;
-    width: 90%; /* Use a percentage to ensure responsiveness */
-    max-width: 1200px; /* Maximum width for larger screens */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    width: 90%;
+    /* Use a percentage to ensure responsiveness */
+    max-width: 1200px;
+    /* Maximum width for larger screens */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
     /* display: flex; */
     flex-wrap: wrap;
 }
 
 /* Heading styles */
 .app-panel-heading {
-    background-color: #337ab7; /* Light blue background */
-    border-color: #337ab7;
+
+    /* background-color: #A33A17; */
+    background-color: #A33A17;
+    /* Light blue background */
+    border-color: #A33A17;
+    /* border-color: #A33A17; */
     color: #fff;
     padding: 10px 15px;
     border-radius: 4px;
-    width: 100%; /* Ensure the heading spans the full width of its container */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    margin: 0; /* Ensure no extra margin is applied */
+    width: 100%;
+    /* Ensure the heading spans the full width of its container */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    margin: 0;
+    /* Ensure no extra margin is applied */
 }
 
 /* Panel body padding */
 .app-panel-body {
     padding: 15px;
-    border-top: 1px solid #ccc; /* Add border to separate body from heading */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    border-top: 1px solid #ccc;
+    /* Add border to separate body from heading */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
 }
 
 /* Flexbox for responsive rows */
@@ -45,7 +58,8 @@
     padding-left: 15px;
     margin-bottom: 15px;
     flex: 1;
-    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width/height */
 }
 
 /* Ensure columns take equal width and are responsive */
@@ -145,7 +159,7 @@
 
 .app-mb0 {
     margin-bottom: 0;
-}   
+}
 
 .app-pt0 {
     padding-top: 0;
@@ -174,20 +188,21 @@
 }
 
 
-.other_app{
-    border: 1px solid #337ab7;
+.other_app {
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    width:  100%;
+    width: 100%;
     /* max-width: 1200px; */
     box-sizing: border-box;
 
 }
+
 /* Container and border styles */
 .app2-main-panel {
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
@@ -199,8 +214,8 @@
 
 /* Heading styles */
 .app2-panel-heading {
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #A33A17;
+    border-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
     border-radius: 4px;
@@ -295,7 +310,8 @@
 
 .app2-form-control {
     width: 100%;
-    padding-right: 110px; /* Space for the addon text */
+    padding-right: 110px;
+    /* Space for the addon text */
     box-sizing: border-box;
 }
 
@@ -311,7 +327,8 @@
     color: #555;
     background-color: #eee;
     border: 1px solid #ccc;
-    border-radius: 0 4px 4px 0; /* Round only the right corners */
+    border-radius: 0 4px 4px 0;
+    /* Round only the right corners */
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -354,7 +371,7 @@
 
 .app2-mb0 {
     margin-bottom: 0;
-}   
+}
 
 .app2-pt0 {
     padding-top: 0;
@@ -389,7 +406,8 @@
     margin-bottom: 15px;
 }
 
-.app2-table th, .app2-table td {
+.app2-table th,
+.app2-table td {
     padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
@@ -417,7 +435,9 @@
     text-align: center;
 }
 
-.app2-lnkAddNewQuali, .app2-lnkUploadMarksheet, .app2-lnkAddNewExp {
+.app2-lnkAddNewQuali,
+.app2-lnkUploadMarksheet,
+.app2-lnkAddNewExp {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
@@ -427,7 +447,9 @@
     text-decoration: none;
 }
 
-.app2-lnkAddNewQuali:hover, .app2-lnkUploadMarksheet:hover, .app2-lnkAddNewExp:hover {
+.app2-lnkAddNewQuali:hover,
+.app2-lnkUploadMarksheet:hover,
+.app2-lnkAddNewExp:hover {
     background-color: #31b0d5;
 }
 
@@ -443,8 +465,8 @@
 }
 
 /* Container and border styles */
-.app3-main-panel {  
-    border: 1px solid #337ab7;
+.app3-main-panel {
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
@@ -458,8 +480,8 @@
 
 /* Heading styles */
 .app3-panel-heading {
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #A33A17;
+    border-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
     border-radius: 4px;
@@ -666,11 +688,11 @@
     font-size: 12px;
     white-space: nowrap;
 }
-    
+
 
 /* App4 Main Panel */
 .app4-main-panel {
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
@@ -679,13 +701,13 @@
     max-width: 1200px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    margin:3%;
+    margin: 3%;
 }
 
 /* Heading styles */
 .app4-panel-heading {
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #A33A17;
+    border-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
     border-radius: 4px;
@@ -845,14 +867,14 @@
 .app4-table {
     width: 100%;
     border-collapse: collapse;
-}   
+}
 
 .app4-table th,
 .app4-table td {
     border: 1px solid #ddd;
     padding: 8px;
     /* text-align: center; */
-    
+
 }
 
 .app4-table th {
@@ -903,7 +925,7 @@
 
 /* App5 Main Panel */
 .app5-container {
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
@@ -917,11 +939,11 @@
 
 /* Heading styles */
 .app5-header {
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #A33A17;
+    border-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
-    border-radius: 4px;     
+    border-radius: 4px;
     margin: 0;
 }
 
@@ -1037,7 +1059,7 @@
 }
 
 .app5-add-new {
-    background-color: #337ab7;
+    background-color: #A33A17;
     color: white;
     padding: 8px;
     border-radius: 5px;
@@ -1046,7 +1068,7 @@
 }
 
 .app5-upload-button {
-    background-color: #337ab7;
+    background-color: #A33A17;
     color: white;
     padding: 8px;
     border-radius: 5px;
@@ -1064,6 +1086,7 @@
 .app5-full-width {
     width: 100%;
 }
+
 /* App6 Main Container */
 .app6-container {
     display: flex;
@@ -1082,7 +1105,7 @@
 
 /* Panel styles */
 .app6-panel {
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin: 3% auto;
@@ -1093,7 +1116,7 @@
 
 /* Heading styles */
 .app6-header {
-    background-color: #337ab7;
+    background-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
     border-bottom: 1px solid #ddd;
@@ -1144,7 +1167,7 @@
     display: inline-block;
     margin-top: 10px;
     color: #fff;
-    background-color: #337ab7;
+    background-color: #A33A17;
     padding: 6px 12px;
     text-align: center;
     text-decoration: none;
@@ -1190,7 +1213,7 @@
 /* App7 Panel */
 .app7-panel {
     overflow: hidden;
-    border: 1px solid #337ab7;
+    border: 1px solid #A33A17;
     border-radius: 4px;
     padding: 0;
     margin-left: auto;
@@ -1199,12 +1222,12 @@
     max-width: 1200px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    margin:3%;
+    margin: 3%;
 }
 
 /* Header styles */
 .app7-header {
-    background-color: #337ab7;
+    background-color: #A33A17;
     color: #fff;
     padding: 10px 15px;
     border-bottom: 1px solid #ddd;
@@ -1261,7 +1284,7 @@
 /* App8 Panel */
 .app8-panel {
     overflow: hidden;
-    /* border: 1px solid #337ab7;
+    /* border: 1px solid #A33A17;
     border-radius: 4px; */
     padding: 0;
     margin-left: auto;
@@ -1270,7 +1293,7 @@
     max-width: 1200px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    margin:3%;
+    margin: 3%;
 }
 
 /* Form group styles */
@@ -1299,7 +1322,7 @@
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    background-color: #337ab7;
+    background-color: #A33A17;
     color: #fff;
     border: none;
     border-radius: 4px;
