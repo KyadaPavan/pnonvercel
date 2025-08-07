@@ -2020,22 +2020,17 @@
       </script>
     </section>
 
-    <section class="registration">
-      <div class="container registration__container" id="enroll">
-        <!-- <div class="registration-flex" data-aos="fade-right">
-          <h2 class="reg__title">Register Now</h2>
-          <img src="assets/images/half-student.webp" alt="" />
-        </div> -->
-        <form
-          action="process_form.php"
-          method="POST"
-          class="registration-form"
-          data-aos="fade-left"
-          id="enrollForm">
+    <div id="enroll">
 
-          <div class="container text-4xl font-bold text-center lg:text-5xl ">
+    </div>
+
+    <section class="registration" id="enrollnowform">
+      <div class="container registration__container" id="enroll">
+        <form class="registration-form" data-aos="fade-left" id="enrollForm">
+          <div class="container text-4xl font-bold text-center lg:text-5xl">
             Enroll Now
           </div>
+
           <input
             type="text"
             name="name"
@@ -2043,6 +2038,7 @@
             id="form-name"
             placeholder="Name"
             required />
+
           <input
             type="email"
             name="email"
@@ -2050,9 +2046,10 @@
             id="form-email"
             placeholder="Email"
             required />
-          <span class="error" id="emailError"
-            style="color: red; display: none">Please enter a valid Gmail address
-            (example@gmail.com).</span>
+          <span class="error" id="emailError" style="color: red; display: none">
+            Please enter a valid Gmail address (example@gmail.com).
+          </span>
+
           <input
             type="tel"
             name="number"
@@ -2060,13 +2057,11 @@
             id="form-phone"
             placeholder="Contact Number"
             required />
-          <span class="error" id="phoneError"
-            style="color: red; display: none">Please enter a valid 10-digit
-            phone number starting with 6-9.</span>
-          <select
-            class="form-class"
-            name="selectClass"
-            id="form-class"
+          <span class="error" id="phoneError" style="color: red; display: none">
+            Please enter a valid 10-digit phone number starting with 6-9.
+          </span>
+
+          <select class="form-class" name="selectClass" id="form-class"
             required>
             <option value>Select Class</option>
             <option value="class6">Class 6</option>
@@ -2074,15 +2069,12 @@
             <option value="class8">Class 8</option>
             <option value="class9">Class 9</option>
             <option value="class10">Class 10</option>
-
             <option value="class11C">Class 11 Commerce</option>
             <option value="class11S">Class 11 Science</option>
-
             <option value="class12C">Class 12 Commerce</option>
             <option value="class12S">Class 12 Science</option>
           </select>
-          <!-- <input type="text" class="form-message" id="form-message"
-            placeholder="Message" /> -->
+
           <textarea
             name="subject"
             id="form-message"
@@ -2091,15 +2083,79 @@
             class="form-message"
             placeholder="Message"></textarea>
 
-          <button type="submit"
+          <button
+            type="submit"
             class="form-submit bg-[#0A0A23] px-6 py-2 rounded-xl text-white transition duration-300 ease-in-out hover:bg-[#A33A17] hover:scale-105 hover:shadow-lg"
             id="form-submit">
             Submit
           </button>
 
+          <div
+            id="formMessage"
+            class="hidden px-4 py-3 mt-4 text-lg font-medium text-center bg-white rounded-md shadow-lg"></div>
+
         </form>
+
       </div>
     </section>
+
+    <script>
+  const form = document.getElementById("enrollForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("form-name").value;
+    const email = document.getElementById("form-email").value;
+    const number = document.getElementById("form-phone").value;
+    const selectClass = document.getElementById("form-class").value;
+    const subject = document.getElementById("form-message").value;
+
+    const formData = { name, email, number, selectClass, subject };
+    const messageEl = document.getElementById("formMessage");
+
+    try {
+      const res = await fetch("https://pn-form-apis.onrender.com/send-enroll-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        messageEl.textContent =
+          "Thank you! Your enrollment has been submitted successfully. Our team will contact you shortly.";
+        messageEl.classList.remove("hidden");
+        messageEl.classList.remove("text-red-600");
+        messageEl.classList.add("text-green-600");
+        form.reset();
+      } else {
+        messageEl.textContent =
+          "There was an issue submitting the form. Please try again.";
+        messageEl.classList.remove("hidden");
+        messageEl.classList.remove("text-green-600");
+        messageEl.classList.add("text-red-600");
+      }
+
+      // Optional: Auto-hide after 5 seconds
+      setTimeout(() => {
+        messageEl.classList.add("hidden");
+      }, 5000);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      messageEl.textContent =
+        "Something went wrong. Please try again later.";
+      messageEl.classList.remove("hidden");
+      messageEl.classList.remove("text-green-600");
+      messageEl.classList.add("text-red-600");
+
+      setTimeout(() => {
+        messageEl.classList.add("hidden");
+      }, 5000);
+    }
+  });
+</script>
 
     <!-- <section class="success">
     <div class="testi_container">
@@ -2332,7 +2388,7 @@
     <div class="brochure">
       <a
         href="assets/PACE-Brocher-Biggest-Final-2024-Single-Page.pdf"
-        class="bg-[#A33A17] px-6 py-2 rounded-xl text-white transition duration-300 ease-in-out hover:bg-[#0A0A23] hover:scale-105 hover:shadow-lg">Download
+        class="bg-gradient-to-r from-[#0A0A23] to-[#A33A17] px-6 py-2 rounded-xl text-white transition duration-300 ease-in-out hover:bg-[#0A0A23] hover:scale-105 hover:shadow-lg">Download
         Brochure</a>
     </div>
 
