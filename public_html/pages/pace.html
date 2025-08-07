@@ -398,47 +398,47 @@
       </div>
     </section>
 
-    <section class="hero-mobile">
+    <section class=" hero-mobile">
       <div id="pace-hero-mobile" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="mt-24 carousel-inner">
           <div class="carousel-item active">
             <img
-              src="../assets/images/pace/mobile-banner-one.jpg"
+              src="../images/Mobile PACE  Banner 01.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 1" />
           </div>
 
           <div class="carousel-item">
             <img
-              src="../assets/images/pace/mobile-banner-two.jpg"
+              src="../images/Mobile PACE  Banner  02.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 2" />
           </div>
 
           <div class="carousel-item">
             <img
-              src="../assets/images/pace/mobile-banner-three.jpg"
+              src="../images/Mobile PACE  Banner  03.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 3" />
           </div>
 
           <div class="carousel-item">
             <img
-              src="../assets/images/pace/mobile-banner-four.jpg"
+              src="../images/Mobile PACE  Banner  04.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 4" />
           </div>
 
           <div class="carousel-item">
             <img
-              src="../assets/images/pace/mobile-banner-five.jpg"
+              src="../images/Mobile PACE  Banner  05.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 5" />
           </div>
 
           <div class="carousel-item">
             <img
-              src="../assets/images/pace/mobile-banner-six.jpg"
+              src="../images/Mobile PACE  Banner  06.jpg"
               class="d-block w-100 h-100"
               alt="Carousel Image 6" />
           </div>
@@ -771,7 +771,7 @@
                 PACE REGISTRATION FORM
               </h2>
 
-              <form id="registrationForm" action>
+              <form id="paceRegistrationForm">
                 <div class="mb-3">
                   <input
                     type="text"
@@ -896,6 +896,7 @@
 
                 <button
                   type="submit"
+                  id="paceSubmitBtn"
                   class="btn btn-primary w-100"
                   style="
                     background: #0056b3;
@@ -908,6 +909,10 @@
                   ">
                   SUBMIT
                 </button>
+
+                <!-- Success/Error Messages -->
+                <div id="paceFormMessage"
+                  style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold;"></div>
               </form>
             </div>
           </div>
@@ -1585,8 +1590,8 @@
         </div>
         <a
           href="tel:+917433986083"
-          class="px-4 py-2 btn btn-light rounded-pill text-primary"
-          style="width: 180px; height: 52px; font-size: 20px">
+          class="px-4 py-2 btn btn-light rounded-pill text-[#A33A17] font-bold"
+          style="width: 180px; height: 52px; font-size: 24px">
           Call Us
         </a>
 
@@ -1667,30 +1672,77 @@
     </section>
 
     <script>
-      document
-        .getElementById("registrationForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const emailField = document.getElementById("email");
-          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-          if (!emailRegex.test(emailField.value)) {
-            alert(
-              "Please enter a valid email address (e.g., example@domain.com)"
-            );
-            emailField.focus();
-            return;
+      // PACE Form API Integration
+      document.addEventListener('DOMContentLoaded', function() {
+        const paceForm = document.getElementById('paceRegistrationForm');
+        const messageDiv = document.getElementById('paceFormMessage');
+        
+        paceForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const submitBtn = document.getElementById('paceSubmitBtn');
+          const originalBtnText = submitBtn.textContent;
+          
+          // Show loading state
+          submitBtn.textContent = 'Submitting...';
+          submitBtn.disabled = true;
+          messageDiv.style.display = 'none';
+          
+          try {
+            // Get form data
+            const formData = {
+              name: document.getElementById('name').value,
+              phone: document.getElementById('phone').value,
+              class: document.getElementById('class').value,
+              examDate: document.getElementById('examDate').value,
+              email: document.getElementById('email').value
+            };
+            
+            // Send API request
+            const response = await fetch('http://localhost:8081/send-pace-form', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
+              // Success
+              messageDiv.style.display = 'block';
+              messageDiv.style.backgroundColor = '#d4edda';
+              messageDiv.style.color = '#155724';
+              messageDiv.style.border = '1px solid #c3e6cb';
+              messageDiv.textContent = result.message || 'PACE registration submitted successfully! We\'ll contact you soon with payment details.';
+              
+              // Reset form
+              paceForm.reset();
+            } else {
+              throw new Error(result.message || 'Failed to submit PACE registration');
+            }
+            
+          } catch (error) {
+            // Error
+            console.error('PACE form submission error:', error);
+            messageDiv.style.display = 'block';
+            messageDiv.style.backgroundColor = '#f8d7da';
+            messageDiv.style.color = '#721c24';
+            messageDiv.style.border = '1px solid #f5c6cb';
+            messageDiv.textContent = 'Error: ' + error.message;
+          } finally {
+            // Reset button
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            
+            // Auto-hide message after 5 seconds
+            setTimeout(() => {
+              messageDiv.style.display = 'none';
+            }, 5000);
           }
-
-          if (this.checkValidity()) {
-            alert("Form submitted successfully!");
-          } else {
-            alert("Please fill all required fields!");
-          }
-
-          this.classList.add("was-validated");
         });
+      });
     </script>
   </body>
 </html>
